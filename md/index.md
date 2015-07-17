@@ -8,4 +8,4 @@ System internals enthusiast, contractor Mac developer, <abbr title="Tomsk State 
 * [\@rodionovd](https://github.com/rodionovd) at GitHub.
 
 > You can also [hire me](mailto:i.am.rodionovd@gmail.com?subject=I'd like to hire you, Dmitry) to work on frameworks, dev tools or OS X applications and utilities.  
-> *Link to my resume will be added soon.*
+> [My resume](./me.html).
