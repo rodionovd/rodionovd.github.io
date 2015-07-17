@@ -3,7 +3,7 @@
 #### TL;DR
 System internals enthusiast, contractor Mac developer, <abbr title="Tomsk State University, Bachelor of Computer Science, 2017">TSU</abbr> student and beginner OSS contributor.
 
-#### Contacts
+#### Locations
 * [\@rodionovme](https://twitter.com/rodionovme) at Twitter
 * [\@rodionovd](https://github.com/rodionovd) at GitHub.
 
