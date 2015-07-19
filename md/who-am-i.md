@@ -45,4 +45,4 @@ a PR on [GitHub](https://github.com/rodionovd/rodionovd.github.io). I'd totally 
 
 -------
 
-[Home](./index.html)
+[Home](/index.html)
