@@ -9,3 +9,8 @@ System internals enthusiast, contractor Mac developer, <abbr title="Tomsk State 
 
 > You can also [hire me](mailto:i.am.rodionovd@gmail.com?subject=I'd like to hire you, Dmitry) to work on frameworks, dev tools or OS X applications and utilities.  
 > [My resume](./me.html).
+
+
+#### Blog
+
+* 07/19/15 — [Who am I?](/blog/who-am-i.html)
