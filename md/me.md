@@ -15,7 +15,7 @@ Mac applications, improving existing building tools and reverse-engineering stuf
 * Telephone: +7-906-951-7506 (Russian)
 
 
-### Personal Projects
+### Projects
 
 * [`rd_route`](https://github.com/rodionovd/rd_route)  
   A library for function hooking on OS X — like mach_override, but without
