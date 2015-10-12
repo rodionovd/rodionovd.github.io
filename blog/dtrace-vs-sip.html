@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
+<body>
+<p><a href="./index.html">Home</a></p>
+<h1 id="dtrace-vs.-system-integrity-protection">DTrace vs. System Integrity Protection</h1>
+<h2 id="the-problem">The Problem</h2>
+<p>As you may now Apple released their new OS X revision 10.11 this year with a great security feature built-in: <a href="https://en.wikipedia.org/wiki/System_Integrity_Protection">System Integrity Protection</a>. In a nutshell, this mechanism protects any system data and important filesystem components (like <code>/System</code> or <code>/usr</code>) from being modified by user; even if they are <em>root</em>. SIP also disables any use of code-injection and debugging techniques for third-party software, so some of your favorite hacks may not work anymore.</p>
+<blockquote>
+<p>Here's an example: if you've been using <a href="http://totalfinder.binaryage.com">TotalFinder</a> extension — which basically injects some code inside Finder in order to make it better — you'll <a href="http://blog.binaryage.com/on-el-capitan/">no longer be able</a> to use it on OS X 10.11 with SIP enabled.</p>
+</blockquote>
+<p>I'm not going to discuss all the pros and cons of this «integrity» thing, but what especially freaks me out is that you aren't supposed to use DTrace at all because:</p>
+<ol style="list-style-type: decimal">
+<li><p>You can no longer attach DTrace to «restricted» processes on your Mac <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. And by «restricted» I mean every single built-in utility, daemon or application:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">sudo</span> dtruss echo <span class="st">&quot;demo&quot;</span>
+<span class="co"># &gt; dtrace: failed to execute echo: dtrace cannot control executables signed with restricted entitlements</span></code></pre></div></li>
+<li>Some of DTrace provides just won't work (e.g. <code>fbt</code>);</li>
+<li><p>Your .d scripts are prohibited from using any destructive actions:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># -w flag stands for «destructive»</span>
+$ <span class="kw">sudo</span> dtrace -w -q -n <span class="st">&#39;BEGIN {printf(&quot;It works!\n&quot;)}&#39;</span> -c ./demo
+<span class="co"># &gt; dtrace: could not enable tracing: Permission denied</span>
+$ <span class="kw">sudo</span> dtrace -q -n <span class="st">&#39;BEGIN {printf(&quot;It works!\n&quot;)}&#39;</span> -c ./demo
+<span class="co"># &gt; It works!</span></code></pre></div></li>
+</ol>
+<h2 id="the-solutions">The Solutions</h2>
+<h3 id="completely-disable-sip">Completely disable SIP</h3>
+<p>Although not recommended by Apple, you can entirely disable System Integrity Protection on you Mac. Here's how:</p>
+<ol style="list-style-type: decimal">
+<li>Boot your Mac into Recovery Mode: reboot it and hold cmd+R until a progress bar appears.</li>
+<li>Choose the language and go to Utilities menu. Choose Terminal there.</li>
+<li><p>Enter this command to disable System Integrity Protection:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">csrutil</span> disable</code></pre></div></li>
+<li><p>It will ask you to reboot — do so and you're free from SIP!</p></li>
+</ol>
+<h5 id="the-good">The Good</h5>
+<p>You're able to do anything you want with the OS, yay! ٩(⸝⸝⸝◕ั ௰ ◕ั⸝⸝⸝ )و</p>
+<h5 id="the-bad">The Bad</h5>
+<p><em>You're not safe</em>: there're plenty of rootkits in a wild which can infect your system. Actually, you're as safe as on OS X 10.10 or 10.9, so judge for yourself.</p>
+<h3 id="partially-disable-sip">Partially disable SIP</h3>
+<p>Fortunately, SIP is not monolithic: it's built from many different modules we can disable/enable separately. Let's take a look at a typical <code>csrutil status</code> output:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">csrutil</span> status
+<span class="kw">System</span> Integrity Protection status: enabled
+
+<span class="kw">Configuration</span>:
+    <span class="kw">Apple</span> Internal: enabled
+    <span class="kw">Kext</span> Signing: enabled
+    <span class="kw">Filesystem</span> Protections: enabled
+    <span class="kw">Debugging</span> Restrictions: enabled
+    <span class="kw">DTrace</span> Restrictions: enabled
+    <span class="kw">NVRAm</span> Protections: enabled</code></pre></div>
+<p>I can count 6 different subsystems out here. Here's the way to selectively disable any of them:</p>
+<ol style="list-style-type: decimal">
+<li>Repeat steps 1 and 2 from «Completely disable SIP» section above.</li>
+<li><p>Now in Terminal enter these commands:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">csrutil</span> clear <span class="co"># restore the default configuration first</span>
+$ <span class="kw">csrutil</span> enable --without dtrace <span class="co"># disable dtrace restrictions *only*</span></code></pre></div>
+<p>That's it: use <code>csrutil enable</code> + <code>--without</code> flag with a name of a module you want to disable:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">csrutil</span> enable --without kext
+$ <span class="kw">csrutil</span> enable --without fs
+$ <span class="kw">csrutil</span> enable --without debug
+$ <span class="kw">csrutil</span> enable --without dtrace
+$ <span class="kw">csrutil</span> enable --without nvram
+<span class="co"># this one below is different, not sure why. Don&#39;t encourage you to disable it anyways…</span>
+$ <span class="kw">csrutil</span> enable --no-internal</code></pre></div></li>
+<li><p>Reboot and enjoy your OS again.</p></li>
+</ol>
+<h5 id="the-good-1">The Good</h5>
+<p>If you only disable <code>dtace</code> module you're still quite safe: SIP will keep an eye on your filesystem and kernel extensions as well as on any software trying to inject code into others.</p>
+<h5 id="the-bad-1">The Bad</h5>
+<p>You're <em>still unable</em> to attach dtrace to restricted processes (༎ຶ⌑༎ຶ):</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">sudo</span> dtruss echo <span class="st">&quot;demo&quot;</span>
+<span class="kw">dtrace</span>: failed to execute echo: dtrace cannot control executables signed with restricted entitlements</code></pre></div>
+<h3 id="bonus-a-win-win-solution">(Bonus): a win-win solution</h3>
+<p>If you ask me, here's my advice: only disable <code>dtrace</code> restrictions on your Mac and use a virtual machine (such as <a href="https://www.virtualbox.org">VirtualBox</a> or <a href="http://www.parallels.com/ru/products/desktop/">Parallels</a>) where SIP is disabled entirely for any deep analysis purposes.</p>
+<p>This way your main OS will remain quite self and you don't actually care about what happens in a guest virtual machine OS since you may restore it to the initial state any time. (๑˃̵ᴗ˂̵)و</p>
+<center>
+🙋🏽
+</center>
+<center>
+<em>October 12, 2015</em>
+</center>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Well, actually Apple have been using PT_DENY_ATTACH <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man2/ptrace.2.html"><code>ptrace()</code></a> flag for iTunes&amp;co. for a while now (since 10.5, IIRC) which also prevents debuggers and DTrace from attaching to these programs. But it was <a href="http://landonf.bikemonkey.org/code/macosx/Leopard_PT_DENY_ATTACH.20080122.html">quite easy</a> to bypass.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
