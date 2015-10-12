@@ -1,4 +1,4 @@
-[Home](./index.html)
+[Home](/index.html)
 
 # DTrace vs. System Integrity Protection
 
