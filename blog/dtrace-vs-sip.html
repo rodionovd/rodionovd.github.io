@@ -109,14 +109,14 @@ $ <span class="kw">csrutil</span> enable --no-internal</code></pre></div></li>
 <li><p>Reboot and enjoy your OS again.</p></li>
 </ol>
 <h5 id="the-good-1">The Good</h5>
-<p>If you only disable <code>dtace</code> module you're still quite safe: SIP will keep an eye on your filesystem and kernel extensions as well as on any software trying to inject code into others.</p>
+<p>If you only disable <code>dtace</code> module you're still quite safe: SIP will keep an eye on your filesystem and kernel extensions as well as on any software trying to inject code.</p>
 <h5 id="the-bad-1">The Bad</h5>
 <p>You're <em>still unable</em> to attach dtrace to restricted processes (༎ຶ⌑༎ຶ):</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">sudo</span> dtruss echo <span class="st">&quot;demo&quot;</span>
 <span class="kw">dtrace</span>: failed to execute echo: dtrace cannot control executables signed with restricted entitlements</code></pre></div>
 <h3 id="bonus-a-win-win-solution">(Bonus): a win-win solution</h3>
-<p>If you ask me, here's my advice: only disable <code>dtrace</code> restrictions on your Mac and use a virtual machine (such as <a href="https://www.virtualbox.org">VirtualBox</a> or <a href="http://www.parallels.com/ru/products/desktop/">Parallels</a>) where SIP is disabled entirely for any deep analysis purposes.</p>
-<p>This way your main OS will remain quite self and you don't actually care about what happens in a guest virtual machine OS since you may restore it to the initial state any time. (๑˃̵ᴗ˂̵)و</p>
+<p>If you ask me, here's my advice: only disable <code>dtrace</code> restrictions on your Mac and use a virtual machine (such as <a href="https://www.virtualbox.org">VirtualBox</a> or <a href="http://www.parallels.com/ru/products/desktop/">Parallels</a>) where SIP is disabled entirely for deep analysis.</p>
+<p>This way your main OS will remain quite secure and you don't actually care about what happens in a guest virtual machine OS since you may restore it to the initial state any time. (๑˃̵ᴗ˂̵)و</p>
 <center>
 🙋🏽
 </center>

@@ -92,7 +92,7 @@ I can count 6 different subsystems out here. Here's the way to selectively disab
 3. Reboot and enjoy your OS again.
 
 ##### The Good
-If you only disable `dtace` module you're still quite safe: SIP will keep an eye on your filesystem and kernel extensions as well as on any software trying to inject code into others.
+If you only disable `dtace` module you're still quite safe: SIP will keep an eye on your filesystem and kernel extensions as well as on any software trying to inject code.
 
 ##### The Bad
 You're *still unable* to attach dtrace to restricted processes (༎ຶ⌑༎ຶ):
@@ -104,9 +104,9 @@ dtrace: failed to execute echo: dtrace cannot control executables signed with re
 
 ### (Bonus): a win-win solution
 
-If you ask me, here's my advice: only disable `dtrace` restrictions on your Mac and use a virtual machine (such as [VirtualBox](https://www.virtualbox.org) or [Parallels](http://www.parallels.com/ru/products/desktop/)) where SIP is disabled entirely for any deep analysis purposes.
+If you ask me, here's my advice: only disable `dtrace` restrictions on your Mac and use a virtual machine (such as [VirtualBox](https://www.virtualbox.org) or [Parallels](http://www.parallels.com/ru/products/desktop/)) where SIP is disabled entirely for deep analysis.
 
-This way your main OS will remain quite self and you don't actually care about what happens in a guest virtual machine OS since you may restore it to the initial state any time. (๑˃̵ᴗ˂̵)و
+This way your main OS will remain quite secure and you don't actually care about what happens in a guest virtual machine OS since you may restore it to the initial state any time. (๑˃̵ᴗ˂̵)و
 
 
 <center>🙋🏽</center>  
