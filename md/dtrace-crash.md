@@ -1,6 +1,6 @@
 [Home](/index.html)
 
-# Crashing OS X with DTrace's speculations
+# Crashing OS X with DTrace’s speculations
 
 A few months ago I was struggling to work around DTrace’s «no-printfs-in-conditions» limitation. One can easily stumble across this by trying to conditionally print something:
 
