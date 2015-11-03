@@ -50,7 +50,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1 id="crashing-os-x-with-dtraces-speculations">Crashing OS X with DTrace’s speculations</h1>
 <p>A few months ago I was struggling to work around DTrace’s «no-printfs-in-conditions» limitation. One can easily stumble across this by trying to conditionally print something:</p>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c">this-&gt;flag == <span class="dv">1</span>
-    ? (<span class="dt">void</span>)pritnf(<span class="st">&quot;Yep, the flag is set to 1&quot;</span>)
+    ? (<span class="dt">void</span>)printf(<span class="st">&quot;Yep, the flag is set to 1&quot;</span>)
     : (<span class="dt">void</span>)<span class="dv">0</span>;</code></pre></div>
 <p>This code will trigger the following error in the D compiler:</p>
 <pre><code>dtrace: failed to compile script foo.d: line 5: tracing function printf( ) may not be called from a D expression (D program context required)</code></pre>

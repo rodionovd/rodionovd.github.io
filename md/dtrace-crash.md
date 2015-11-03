@@ -6,7 +6,7 @@ A few months ago I was struggling to work around DTrace’s «no-printfs-in-cond
 
 ```c
 this->flag == 1
-    ? (void)pritnf("Yep, the flag is set to 1")
+    ? (void)printf("Yep, the flag is set to 1")
     : (void)0;
 ```
 
