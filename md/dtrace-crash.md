@@ -1,6 +1,6 @@
 [Home](/index.html)
 
-# Crashing DTrace with speculations
+# Crashing OS X with DTrace's speculations
 
 A few months ago I was struggling to work around DTrace’s «no-printfs-in-conditions» limitation. One can easily stumble across this by trying to conditionally print something:
 
@@ -52,7 +52,7 @@ syscall::open:return
 }
 ```
 
-Looks pretty, yeah? But don't even try to run this script on your Mac — **it will make your kernel panic and crash the whole operation system[^1] **. ¯\_(ツ)_/¯
+Looks pretty, yeah? But don't even try to run this script on your Mac — **it will make your kernel panic and crash the whole OS[^1] **. ಠ_ಠ
 
 I filed a radar on this matter: rdar://22229825, but haven't had any response for three months now…
 

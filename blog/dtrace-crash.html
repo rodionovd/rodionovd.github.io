@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Crashing DTrace with speculations</title>
+  <title>Crashing OS X with DTrace's speculations</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -47,7 +47,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 <body>
 <p><a href="/index.html">Home</a></p>
-<h1 id="crashing-dtrace-with-speculations">Crashing DTrace with speculations</h1>
+<h1 id="crashing-os-x-with-dtraces-speculations">Crashing OS X with DTrace's speculations</h1>
 <p>A few months ago I was struggling to work around DTrace’s «no-printfs-in-conditions» limitation. One can easily stumble across this by trying to conditionally print something:</p>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c">this-&gt;flag == <span class="dv">1</span>
     ? (<span class="dt">void</span>)pritnf(<span class="st">&quot;Yep, the flag is set to 1&quot;</span>)
@@ -85,7 +85,7 @@ syscall::open:<span class="kw">return</span>
     discard(self-&gt;spec);
     self-&gt;spec = <span class="dv">0</span>;
 }</code></pre></div>
-<p>Looks pretty, yeah? But don't even try to run this script on your Mac — <strong>it will make your kernel panic and crash the whole operation system<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> </strong>. ¯_(ツ)_/¯</p>
+<p>Looks pretty, yeah? But don't even try to run this script on your Mac — <strong>it will make your kernel panic and crash the whole OS<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> </strong>. ಠ_ಠ</p>
 <p>I filed a radar on this matter: rdar://22229825, but haven't had any response for three months now…</p>
 <center>
 🎃
