@@ -13,5 +13,6 @@ System internals enthusiast, contractor Mac developer, <abbr title="Tomsk State 
 
 #### Blog
 
+* 11/03/15 — [Crashing DTrace with speculations](/blog/dtrace-crash.html)
 * 10/12/15 — [DTrace vs. System Integrity Protection](/blog/dtrace-vs-sip.html)
 * 07/19/15 — [Who am I?](/blog/who-am-i.html)
