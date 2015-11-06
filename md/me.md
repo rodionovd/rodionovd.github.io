@@ -1,4 +1,3 @@
-
 [Home](./index.html)
 
 -------
@@ -13,7 +12,7 @@ Objective-C, Swift, C, an assembly language and Python. I enjoy discovering low-
 
 ### Contacts
 
-* Email: [i {dot} am {dot} rodionovd {at} gmail.com](mailto:i.am.rodionovd@gmail.com)
+* Email: i.am.rodionovd@gmail.com
 * IRC: I'm `rodionovd` on Freenode  
 * Skype: `rodionovme`
 * Telephone: +7-906-951-7506 (Russian)
@@ -105,15 +104,12 @@ Here's the list of project I'm proud of:
 
 * Ruby — *mostly for `Rakefile`s*  
 
-* Other languages
-    * Bash, AppleScript, C++, Lisp, JavaScript
+* Bash, AppleScript, C++, Lisp and JavaScript
 
 ###### Software  
 
 * IDEs
     * Xcode, AppCode, PyCharm
-* DevTools
-    * lldb, gdb, clang, gcc, otool, sqlite
 * Bug trackers  
     * Redmine and GitHub Issues
 * VCS
@@ -122,8 +118,6 @@ Here's the list of project I'm proud of:
     * Slack, IRC, email, GitHub Issues, Twitter  
 * Disassemblers  
     * IDA Pro, Hopper Disassembler, otool/otx  
-* Text Editors  
-    * Atom, Sublime Text, vim
 * Other  
     * DTrace, rake, make, zsh, CocoaPods, brew
 
