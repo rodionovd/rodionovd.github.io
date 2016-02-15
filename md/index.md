@@ -1,14 +1,16 @@
-# Dmitry Rodionov
+# Internals Exposed 🔬
+
+I’m Dmitry Rodionov, I build software for Macs.
+
+> I’m looking for a summer internship position (anything Mac-related) right now. Please, let me know if your company’s looking for an intern.
+
+I’m available for OS X consulting/contracting work. Ping me if you need something done on the platform.
+Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage:i.am.rodionovd@gmal.com). I’m also open for [emails](mailto:i.am.rodionovd@gmail.com).
+
 
 #### TL;DR
-System internals enthusiast, contractor Mac developer, <abbr title="Tomsk State University, Bachelor of Computer Science, 2017">TSU</abbr> student and beginner OSS contributor.
 
-#### Locations
-* [\@rodionovme](https://twitter.com/rodionovme) at Twitter
-* [\@rodionovd](https://github.com/rodionovd) at GitHub.
-
-> You can also [hire me](mailto:i.am.rodionovd@gmail.com?subject=I'd like to hire you, Dmitry) to work on frameworks, dev tools or OS X applications and utilities.  
-> [My resume](./me.html).
+My full résumé is available [here](./me.html).
 
 
 #### Blog

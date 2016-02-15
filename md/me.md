@@ -1,126 +1,61 @@
-[Home](./index.html)
+# Hi there🖖
 
--------
+I’m Dmitry Rodionov, I build software for Macs.
 
-# Dmitry Rodionov
-> OS X software developer and system internals enthusiast
+> I’m looking for a summer internship position (anything Mac-related) right now. Please, let me know if your company’s looking for an intern.
 
-### Brief
+### Contracting
 
-I've been building software for Apple platforms for years using
-Objective-C, Swift, C, an assembly language and Python. I enjoy discovering low-level details of OS X and reverse-engineering stuff (both built-in and third-party).
+I’m available for OS X consulting/contracting work. Ping me if you need something done on the platform.
+Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage:i.am.rodionovd@gmal.com). I’m also open for [emails](mailto:i.am.rodionovd@gmail.com).
 
-### Contacts
+### Experience
 
-* Email: i.am.rodionovd@gmail.com
-* IRC: I'm `rodionovd` on Freenode  
-* Skype: `rodionovme`
-* Telephone: +7-906-951-7506 (Russian)
+* **December 2011 — now, contractor Mac developer**
+    I’ve been building/fixing system utilities and Cocoa applications for clients.
+    Those projects include (among others): network daemons, Mail.app plugins, WebKit-based wrappers, Finder extensions, VPN clients, Accessibility-enabled helpers and automation software.
 
-### Social
+* **Summer 2015, intern @ Cuckoo Foundation Inc.**
+    I was responsible for building an OS X malware analyzer for [Cuckoo Sandbox](http://www.cuckoosandbox.org/) as part of my Google Summer of Code project.
+    Wrote tons of Python code and very tricky DTrace hacks. Source code is available [on GitHub](https://github.com/rodionovd/cuckoo-osx-analyzer) (**UPD:** *merged into [upsteam](https://github.com/cuckoosandbox/cuckoo) now*).
 
-* GitHub: [`rodionovd`](https://github.com/rodionovd)
-* Twitter: [`rodionovme`](https://twitter.com/rodionovme)
-* StackOverflow: [Dmitry Rodionov](http://stackoverflow.com/users/4511554/dmitry-rodionov)
+I’ve been maintaining a pretty set of open-source libraries and applications. Here’s my favorites:
 
-### Projects
+* [Daruma](http://internals.exposed/daruma)
+  A Mac app for discovering Japanese emoticons the fun way `ヽ(=^･ω･^=)丿`. Daruma allows you to search for emoticons by their labels, copy them to the clipboard or just drag’n’drop into other applications like Safari or Messages and many more!
 
-Here's the list of project I'm proud of:
+      > Keywords: *NSCollectionView, glyphs cache, text drawing and full keyboard access*.
 
-* [`rd_route`](https://github.com/rodionovd/rd_route)  
-  A library for function hooking on OS X — like [mach_override](https://github.com/rentzsch/mach_override), but without
-  assembly trampolines and hardcoded stuff.
+* [`SWRoute`](https://github.com/rodionovd/SWRoute)  
+A PoC of function hooking in pure Swift.
 
-    > *Keywords*: raw memory manipulations, segments remapping, Mach-O images, symbolication.
+    > Keywords: *Swift internals, memory manipulations, Swift reverse-engineering, no Objective-C runtime involved*.
 
 * [`liblorgnette`](https://github.com/rodionovd/liblorgnette)  
   Remote symbolication for both OS X and iOS.  
-  You may think of it as of `dlsym()`, but for any process running on your system.
+  It works like `dlsym()`, but for any process running on your system.
+
+    > Keywords: *dyld API (process images, building nlists from scratch, symbolication, etc), Mach-O internals*
 
 * [`task_vaccine`](https://github.com/rodionovd/task_vaccine)  
-  A lightweight code injection library.  
+A lightweight code injection library.  
 
-      > *Keywords*: `task_for_pid()`, handling exceptions in a remote process, modifying a thread state, dark magic.
-
-* [`SWRoute`](https://github.com/rodionovd/SWRoute)  
-  First PoC of function hooking in pure Swift.
-
-      > *Keywords*: the language internals, memory manipulations, Swift reverse-engineering, no Objective-C runtime involved.
-
-* [`machobot`](https://github.com/rodionovd/machobot)  
-   A handy Python toolkit for Mach-O files static analysis.
-
-       > *Keywords*: macholib, load commands, injection.
+    > Keywords: *`task_for_pid()`, handling exceptions in a remote process, modifying a thread state, not saying that `mach_inject` is bad, but…*.
 
 * [Locatr](http://internals.exposed/locatrapp/)  
    A Cocoa app for faking your geolocation on Mac. Wonna tweet from the
    North Pole? Give it a chance!
 
-* [`ABetterPlaceForTweetbot`](https://github.com/rodionovd/ABetterPlaceForTweetbot)  
-  A positivity filter for [Tweetbot](http://tapbots.com/tweetbot/mac/) in the morning. Inspired by [\@orta](https://twitter.com/orta/status/554968403040288768)
-  and [abetterplace](https://github.com/Jonty/abetterplace).  
-  Uses `DYLD_INSERT_LIBRARIES` and Objective-C method swizzling for filtering tweets in your timeline.
+    > **UPD:** Locatr has stopped working on El Capitan due to System Integrity Protection restrictions. What a loss!
 
-* [`Cegta`](https://github.com/rodionovd/Cegta)  
-  Everything-in-a-header DSL for TDD/BDD written in C. Inspired by [Specta](https://github.com/specta/specta) and
-  [RSpec](http://rspec.info).
+### Writing & Speaking
 
-* [Daruma](http://internals.exposed/daruma)
-  A Mac app for discovering Japanese emoticons the fun way `ヽ(=^･ω･^=)丿`. Daruma allows you to search for emoticons by their labels, copy them to the clipboard or just drag’n’drop into other applications like Safari or Messages and many more!
-
-      > *Keywords*: NSCollectionView, glyphs cache, text drawing and full keyboard access.
-
-
-### OSS contributions
-
-* [Homebrew Cask](http://caskroom.io)  
-* [Quick](https://github.com/Quick/Quick), [JSQSystemSoundPlayer](https://github.com/jessesquires/JSQSystemSoundPlayer)  
-* [GIFs app](https://github.com/orta/GIFs), [Loading app](https://github.com/BonzaiThePenguin/Loading)  
-
-* As part of my Google Summer of Code 2015 project I've been building [an OS X malware analyzer](https://github.com/rodionovd/cuckoo-osx-analyzer) for [Cuckoo Sandbox](http://www.cuckoosandbox.org/). This analyzer relies on DTrace under the hood, so there're lots of [sophisticated `.d` scripts](https://github.com/rodionovd/cuckoo-osx-analyzer/blob/master/analyzer/darwin/lib/dtrace/follow_children.d) and Python wrappers.
-
-* I also have [a blog](http://internals.exposed) where I share my knowledge and rants about programming, tools and other totally unrelated things.
-
-### Toolchain
-
-###### Programming languages, libraries, frameworks and techniques
-
-* Objective-C and Swift
-    * General: Foundation, CoreData, WebKit, AVFoundation, CoreAudio, IOKit;  
-    * Mac: AppKit, Security, ServiceManagement, ApplicationServices, Carbon;  
-    * iOS: very limited knowledge of UIKit;
-
-* C  
-    * stdlib, blocks, GCD (aka libdispatch);
-    * Mach API (memory, threads, tasks, function hooking, code injection);  
-    * dyld API (images, building nlists from scratch, symbolication);
-
-* Assembly — *I don't actually write software in assembly nowadays,
-  but still using it for reverse-engineering*  
-    * x86 and x86_64;
-    * arm (armv7), arm64 (limited knowledge);   
-
-* Python — *anything but the web thing*
-
-* Ruby — *mostly for `Rakefile`s*  
-
-* Bash, AppleScript, C++, Lisp and JavaScript
-
-###### Software  
-
-* IDEs
-    * Xcode, AppCode, PyCharm
-* Bug trackers  
-    * Redmine and GitHub Issues
-* VCS
-    * Git and little SVN
-* Social  
-    * Slack, IRC, email, GitHub Issues, Twitter  
-* Disassemblers  
-    * IDA Pro, Hopper Disassembler, otool/otx  
-* Other  
-    * DTrace, rake, make, zsh, CocoaPods, brew
+I have [a blog](http://internals.exposed) where I share my knowledge and rants about programming, tools and other totally unrelated things.
 
 ### Education
 
-I'm studying Computer Science in Tomsk State University, Bachelor @ 2017.
+I'm studying Computer Science in Tomsk State University, B.S. @ 2013–2017.
+
+-------
+
+[Home](./index.html)

@@ -1,141 +1,85 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <title>About me</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="css/main.css" type="text/css" />
+	<meta charset="utf-8"/>
+	<meta name="creator" content="Marked.app"/>
+	<title>Dmitry Rodionov</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css"/>
 </head>
 <body>
-<p><a href="./index.html">Home</a></p>
-<hr />
-<h1 id="dmitry-rodionov">Dmitry Rodionov</h1>
+
+<h1 id="hithere🖖">Hi there🖖</h1>
+
+<p>I’m Dmitry Rodionov, I build software for Macs.</p>
+
 <blockquote>
-<p>OS X software developer and system internals enthusiast</p>
+<p>I’m looking for a summer internship position (anything Mac-related) right now. Please, let me know if your company’s looking for an intern.</p>
 </blockquote>
-<h3 id="brief">Brief</h3>
-<p>I've been building software for Apple platforms for years using Objective-C, Swift, C, an assembly language and Python. I enjoy discovering low-level details of OS X and reverse-engineering stuff (both built-in and third-party).</p>
-<h3 id="contacts">Contacts</h3>
+
+<h3 id="contracting">Contracting</h3>
+
+<p>I’m available for OS X consulting/contracting work. Ping me if you need something done on the platform.<br/>
+Let’s chat <a href="https://twitter.com/rodionovme">on Twitter</a> or <a href="imessage:i.am.rodionovd@gmal.com">Messages</a>. I’m also open for <a href="mailto:i.am.rodionovd@gmail.com">emails</a>.</p>
+
+<h3 id="experience">Experience</h3>
+
 <ul>
-<li>Email: i.am.rodionovd@gmail.com</li>
-<li>IRC: I'm <code>rodionovd</code> on Freenode<br />
-</li>
-<li>Skype: <code>rodionovme</code></li>
-<li>Telephone: +7-906-951-7506 (Russian)</li>
+<li><p><strong>December 2011 — now, contractor Mac developer</strong><br/>
+I’ve been building/fixing system utilities and Cocoa applications for clients.<br/>
+Those projects include (among others): network daemons, Mail.app plugins, WebKit-based wrappers, Finder extensions, VPN clients, Accessibility-enabled helpers and automation software.</p></li>
+<li><p><strong>Summer 2015, intern @ Cuckoo Foundation Inc.</strong><br/>
+I was responsible for building an OS X malware analyzer for <a href="http://www.cuckoosandbox.org/">Cuckoo Sandbox</a> as part of my Google Summer of Code project.<br/>
+Wrote tons of Python code and very tricky DTrace hacks. Source code is available <a href="https://github.com/rodionovd/cuckoo-osx-analyzer">on GitHub</a> (<strong>UPD:</strong> <em>merged into <a href="https://github.com/cuckoosandbox/cuckoo">upsteam</a> now</em>).</p></li>
 </ul>
-<h3 id="social">Social</h3>
+
+<p>I’ve been maintaining a pretty set of open-source libraries and applications. Here’s my favorites:</p>
+
 <ul>
-<li>GitHub: <a href="https://github.com/rodionovd"><code>rodionovd</code></a></li>
-<li>Twitter: <a href="https://twitter.com/rodionovme"><code>rodionovme</code></a></li>
-<li>StackOverflow: <a href="http://stackoverflow.com/users/4511554/dmitry-rodionov">Dmitry Rodionov</a></li>
-</ul>
-<h3 id="projects">Projects</h3>
-<p>Here's the list of project I'm proud of:</p>
-<ul>
-<li><p><a href="https://github.com/rodionovd/rd_route"><code>rd_route</code></a><br />
- A library for function hooking on OS X — like <a href="https://github.com/rentzsch/mach_override">mach_override</a>, but without assembly trampolines and hardcoded stuff.</p>
+<li><p><a href="http://internals.exposed/daruma">Daruma</a><br/>
+ A Mac app for discovering Japanese emoticons the fun way <code>ヽ(=^･ω･^=)丿</code>. Daruma allows you to search for emoticons by their labels, copy them to the clipboard or just drag’n’drop into other applications like Safari or Messages and many more!</p>
+
 <blockquote>
-<p><em>Keywords</em>: raw memory manipulations, segments remapping, Mach-O images, symbolication.</p>
+<p>Keywords: <em>NSCollectionView, glyphs cache, text drawing and full keyboard access</em>.</p>
 </blockquote></li>
-<li><p><a href="https://github.com/rodionovd/liblorgnette"><code>liblorgnette</code></a><br />
- Remote symbolication for both OS X and iOS.<br />
- You may think of it as of <code>dlsym()</code>, but for any process running on your system.</p></li>
-<li><p><a href="https://github.com/rodionovd/task_vaccine"><code>task_vaccine</code></a><br />
- A lightweight code injection library.</p>
+<li><p><a href="https://github.com/rodionovd/SWRoute"><code>SWRoute</code></a><br/>
+A PoC of function hooking in pure Swift.</p>
+
 <blockquote>
-<p><em>Keywords</em>: <code>task_for_pid()</code>, handling exceptions in a remote process, modifying a thread state, dark magic.</p>
+<p>Keywords: <em>Swift internals, memory manipulations, Swift reverse-engineering, no Objective-C runtime involved</em>.</p>
 </blockquote></li>
-<li><p><a href="https://github.com/rodionovd/SWRoute"><code>SWRoute</code></a><br />
- First PoC of function hooking in pure Swift.</p>
+<li><p><a href="https://github.com/rodionovd/liblorgnette"><code>liblorgnette</code></a><br/>
+ Remote symbolication for both OS X and iOS.<br/>
+ It works like <code>dlsym()</code>, but for any process running on your system.</p>
+
 <blockquote>
-<p><em>Keywords</em>: the language internals, memory manipulations, Swift reverse-engineering, no Objective-C runtime involved.</p>
+<p>Keywords: <em>dyld API (process images, building nlists from scratch, symbolication, etc), Mach-O internals</em></p>
 </blockquote></li>
-<li><p><a href="https://github.com/rodionovd/machobot"><code>machobot</code></a><br />
- A handy Python toolkit for Mach-O files static analysis.</p>
+<li><p><a href="https://github.com/rodionovd/task_vaccine"><code>task_vaccine</code></a><br/>
+A lightweight code injection library. </p>
+
 <blockquote>
-<p><em>Keywords</em>: macholib, load commands, injection.</p>
+<p>Keywords: <em><code>task_for_pid()</code>, handling exceptions in a remote process, modifying a thread state, not saying that <code>mach_inject</code> is bad, but…</em>.</p>
 </blockquote></li>
-<li><p><a href="http://internals.exposed/locatrapp/">Locatr</a><br />
- A Cocoa app for faking your geolocation on Mac. Wonna tweet from the North Pole? Give it a chance!</p></li>
-<li><p><a href="https://github.com/rodionovd/ABetterPlaceForTweetbot"><code>ABetterPlaceForTweetbot</code></a><br />
- A positivity filter for <a href="http://tapbots.com/tweetbot/mac/">Tweetbot</a> in the morning. Inspired by <a href="https://twitter.com/orta/status/554968403040288768">@orta</a> and <a href="https://github.com/Jonty/abetterplace">abetterplace</a>.<br />
- Uses <code>DYLD_INSERT_LIBRARIES</code> and Objective-C method swizzling for filtering tweets in your timeline.</p></li>
-<li><p><a href="https://github.com/rodionovd/Cegta"><code>Cegta</code></a><br />
- Everything-in-a-header DSL for TDD/BDD written in C. Inspired by <a href="https://github.com/specta/specta">Specta</a> and <a href="http://rspec.info">RSpec</a>.</p></li>
-<li><p><a href="http://internals.exposed/daruma">Daruma</a> A Mac app for discovering Japanese emoticons the fun way <code>ヽ(=^･ω･^=)丿</code>. Daruma allows you to search for emoticons by their labels, copy them to the clipboard or just drag’n’drop into other applications like Safari or Messages and many more!</p>
+<li><p><a href="http://internals.exposed/locatrapp/">Locatr</a><br/>
+ A Cocoa app for faking your geolocation on Mac. Wonna tweet from the<br/>
+ North Pole? Give it a chance!</p>
+
 <blockquote>
-<p><em>Keywords</em>: NSCollectionView, glyphs cache, text drawing and full keyboard access.</p>
+<p><strong>UPD:</strong> Locatr has stopped working on El Capitan due to System Integrity Protection restrictions. What a loss!</p>
 </blockquote></li>
 </ul>
-<h3 id="oss-contributions">OSS contributions</h3>
-<ul>
-<li><a href="http://caskroom.io">Homebrew Cask</a><br />
-</li>
-<li><a href="https://github.com/Quick/Quick">Quick</a>, <a href="https://github.com/jessesquires/JSQSystemSoundPlayer">JSQSystemSoundPlayer</a><br />
-</li>
-<li><p><a href="https://github.com/orta/GIFs">GIFs app</a>, <a href="https://github.com/BonzaiThePenguin/Loading">Loading app</a></p></li>
-<li><p>As part of my Google Summer of Code 2015 project I've been building <a href="https://github.com/rodionovd/cuckoo-osx-analyzer">an OS X malware analyzer</a> for <a href="http://www.cuckoosandbox.org/">Cuckoo Sandbox</a>. This analyzer relies on DTrace under the hood, so there're lots of <a href="https://github.com/rodionovd/cuckoo-osx-analyzer/blob/master/analyzer/darwin/lib/dtrace/follow_children.d">sophisticated <code>.d</code> scripts</a> and Python wrappers.</p></li>
-<li><p>I also have <a href="http://internals.exposed">a blog</a> where I share my knowledge and rants about programming, tools and other totally unrelated things.</p></li>
-</ul>
-<h3 id="toolchain">Toolchain</h3>
-<h6 id="programming-languages-libraries-frameworks-and-techniques">Programming languages, libraries, frameworks and techniques</h6>
-<ul>
-<li>Objective-C and Swift
-<ul>
-<li>General: Foundation, CoreData, WebKit, AVFoundation, CoreAudio, IOKit;<br />
-</li>
-<li>Mac: AppKit, Security, ServiceManagement, ApplicationServices, Carbon;<br />
-</li>
-<li>iOS: very limited knowledge of UIKit;</li>
-</ul></li>
-<li>C
-<ul>
-<li>stdlib, blocks, GCD (aka libdispatch);</li>
-<li>Mach API (memory, threads, tasks, function hooking, code injection);<br />
-</li>
-<li>dyld API (images, building nlists from scratch, symbolication);</li>
-</ul></li>
-<li>Assembly — <em>I don't actually write software in assembly nowadays, but still using it for reverse-engineering</em>
-<ul>
-<li>x86 and x86_64;</li>
-<li>arm (armv7), arm64 (limited knowledge);</li>
-</ul></li>
-<li><p>Python — <em>anything but the web thing</em></p></li>
-<li><p>Ruby — <em>mostly for <code>Rakefile</code>s</em></p></li>
-<li><p>Bash, AppleScript, C++, Lisp and JavaScript</p></li>
-</ul>
-<h6 id="software">Software</h6>
-<ul>
-<li>IDEs
-<ul>
-<li>Xcode, AppCode, PyCharm</li>
-</ul></li>
-<li>Bug trackers
-<ul>
-<li>Redmine and GitHub Issues</li>
-</ul></li>
-<li>VCS
-<ul>
-<li>Git and little SVN</li>
-</ul></li>
-<li>Social
-<ul>
-<li>Slack, IRC, email, GitHub Issues, Twitter<br />
-</li>
-</ul></li>
-<li>Disassemblers
-<ul>
-<li>IDA Pro, Hopper Disassembler, otool/otx<br />
-</li>
-</ul></li>
-<li>Other
-<ul>
-<li>DTrace, rake, make, zsh, CocoaPods, brew</li>
-</ul></li>
-</ul>
+
+<h3 id="writingspeaking">Writing &amp; Speaking</h3>
+
+<p>I have <a href="http://internals.exposed">a blog</a> where I share my knowledge and rants about programming, tools and other totally unrelated things.</p>
+
 <h3 id="education">Education</h3>
-<p>I'm studying Computer Science in Tomsk State University, Bachelor @ 2017.</p>
+
+<p>I&#8217;m studying Computer Science in Tomsk State University, B.S. @ 2013–2017.</p>
+
+<hr />
+
+<p><a href="./index.html">Home</a></p>
+
 </body>
 </html>
