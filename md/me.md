@@ -17,7 +17,7 @@ Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage
 
 * **Summer 2015, intern @ Cuckoo Foundation Inc.**
     I was responsible for building an OS X malware analyzer for [Cuckoo Sandbox](http://www.cuckoosandbox.org/) as part of my Google Summer of Code project.
-    Wrote tons of Python code and very tricky DTrace hacks. Source code is available [on GitHub](https://github.com/rodionovd/cuckoo-osx-analyzer) (**UPD:** *merged into [upsteam](https://github.com/cuckoosandbox/cuckoo) now*).
+    Wrote tons of Python code and put together some tricky DTrace hacks. Source code is available [on GitHub](https://github.com/rodionovd/cuckoo-osx-analyzer) (**UPD:** *merged into [upsteam](https://github.com/cuckoosandbox/cuckoo) now*).
 
 I’ve been maintaining a pretty set of open-source libraries and applications. Here’re my favorites:
 
