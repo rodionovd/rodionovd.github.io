@@ -19,7 +19,7 @@ Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage
     I was responsible for building an OS X malware analyzer for [Cuckoo Sandbox](http://www.cuckoosandbox.org/) as part of my Google Summer of Code project.
     Wrote tons of Python code and very tricky DTrace hacks. Source code is available [on GitHub](https://github.com/rodionovd/cuckoo-osx-analyzer) (**UPD:** *merged into [upsteam](https://github.com/cuckoosandbox/cuckoo) now*).
 
-I’ve been maintaining a pretty set of open-source libraries and applications. Here’s my favorites:
+I’ve been maintaining a pretty set of open-source libraries and applications. Here’re my favorites:
 
 * [Daruma](http://internals.exposed/daruma)
   A Mac app for discovering Japanese emoticons the fun way `ヽ(=^･ω･^=)丿`. Daruma allows you to search for emoticons by their labels, copy them to the clipboard or just drag’n’drop into other applications like Safari or Messages and many more!
