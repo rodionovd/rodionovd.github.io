@@ -10,7 +10,7 @@ Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage
 
 #### TL;DR
 
-My full résumé is available [here](./me.html).
+My résumé is available [here](./me.html).
 
 
 #### Blog
