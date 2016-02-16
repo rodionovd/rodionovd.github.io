@@ -50,7 +50,7 @@ A lightweight code injection library.
 
 ### Writing & Speaking
 
-I have [a blog](http://internals.exposed) where I share my knowledge and rants about programming, tools and other totally unrelated things.
+I have [a blog](http://internals.exposed) where I share my knowledge about programming, tools and other totally unrelated things.
 
 ### Education
 
