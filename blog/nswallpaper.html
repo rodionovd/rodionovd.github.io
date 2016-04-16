@@ -46,8 +46,7 @@ extern void DesktopPictureSetDisplay(uint32_t displayID, CFDictionaryRef specs, 
 }</code></pre>
 
 <p>Call <code>ApplyCustomPlainColorWallpaperHack()</code> before updating the wallpaper and<br/>
-save the returned value — it&#8217;s a dictionary containing a default display<br/>
-configuration; you may want to re-apply it later:</p>
+save the returned value — it&#8217;s a dictionary containing a default display configuration; you may want to re-apply it later:</p>
 <pre><code class="(null)">CFDictionaryRef originalSpecs = CFRetain(ApplyCustomPlainColorWallpaperHack());
 [[NSWorkspace sharedWorkspace] setDesktopImageURL: newURL ... ];</code></pre>
 

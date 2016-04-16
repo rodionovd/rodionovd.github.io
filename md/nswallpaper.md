@@ -40,8 +40,7 @@ CFDictionaryRef ApplyCustomPlainColorWallpaperHack(void)
 ```
 
 Call `ApplyCustomPlainColorWallpaperHack()` before updating the wallpaper and
-save the returned value — it's a dictionary containing a default display
-configuration; you may want to re-apply it later:
+save the returned value — it's a dictionary containing a default display configuration; you may want to re-apply it later:
 
 ```
 CFDictionaryRef originalSpecs = CFRetain(ApplyCustomPlainColorWallpaperHack());
