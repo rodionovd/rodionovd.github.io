@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="creator" content="Marked.app"/>
+	<title>Updating Desktop Wallpaper with NSWorkspace</title>
+</head>
+<body>
+
+<p><a href="./index.html">home</a> • <a href="./me.html">about me</a></p>
+
+<hr />
+
+<h1 id="updatingdesktopwallpaperwith nsworkspace">Updating Desktop Wallpaper with NSWorkspace</h1>
+
+<blockquote>
+<p>tl;dr: it&#8217;s tricky sometimes<br/>
+rdar://24353557</p>
+</blockquote>
+
+<p>I&#8217;m not any good at writing inspiring introductions of my blog posts, so there’s a bug in <code>-[NSWorkspace setDesktopImageURL:forScreen:options:error]</code> <a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a> that prevents a new wallpaper from appearing if the previous desktop image was a custom plain color (set via «Desktop &amp; Screen Saver» preferences pane; use a color palette to choose any non-standard color).</p>
+
+<h3 id="theworkaround">The Workaround</h3>
+
+<p>The reason for the bug as far as I understand it is the above mentioned preference pane sets an extended display flag <code>NoImage</code> (using <code>DesktopPictureSetDisplay()</code> Carbon API) when applying a solid color wallpaper while <code>NSWorkspace</code>’s methods <em>don’t clean this flag up</em> before making changes so the <em>visible</em> desktop image remains the same (these methods report success though).</p>
+
+<p>Thus if we want to work around this issue we have to use the same APIs:</p>
+<pre><code class="(null)">/// Returns a copy of current display specs for the given display
+extern CFDictionaryRef DesktopPictureCopyDisplay(uint32_t displayID, uint32_t unknown);
+/// Sets current display specs for the given display
+extern void DesktopPictureSetDisplay(uint32_t displayID, CFDictionaryRef specs, uint32_t unknown, uint32_t unknown2);</code></pre>
+
+<p>First let&#8217;s remove this <code>NoImage</code> flag from current display’s specs:</p>
+<pre><code class="(null)">CFDictionaryRef ApplyCustomPlainColorWallpaperHack(void)
+{
+    uint32_t displayID = mainDisplayID();
+    NSDictionary * currentSpecs =
+        (__bridge NSDictionary *)DesktopPictureCopyDisplay(displayID, 0);
+    NSDictionary *newSpecs =
+        [currentSpecs mtl_dictionaryByRemovingValuesForKeys: @[@&quot;NoImage&quot;]];
+    DesktopPictureSetDisplay(displayID,
+                            (__bridge CFDictionaryRef)(newSpecs), 1, 1);
+    return currentSpecs;
+}</code></pre>
+
+<p>Call <code>ApplyCustomPlainColorWallpaperHack()</code> before updating the wallpaper and<br/>
+save the returned value — it&#8217;s a dictionary containing a default display<br/>
+configuration; you may want to re-apply it later:</p>
+<pre><code class="(null)">CFDictionaryRef originalSpecs = CFRetain(ApplyCustomPlainColorWallpaperHack());
+[[NSWorkspace sharedWorkspace] setDesktopImageURL: newURL ... ];</code></pre>
+
+<p>Then let’s introduce a way to rollback our changes to the specs. Remember that we’ve saved the original ones? We could re-apply them at any moment:</p>
+<pre><code class="(null)">void RollbackCustomPlainColorWallpaperHack(CFDictionaryRef originalSpecs)
+{
+    DesktopPictureSetDisplay(mainDisplayID(), originalSpecs, 1, 1);
+}
+
+// (Optional: if you want to restore the original plain color background)
+RollbackCustomPlainColorWallpaperHack(originalSpecs);
+</code></pre>
+
+<p><strong>Note</strong> that these functions are hardcoded to work with the main screen (display) only, but you can easily modify them to accept any display ID. Just to give you an idea, here&#8217;s what <code>mainDisplayID()</code> function may look like:</p>
+<pre><code class="(null)">static uint32_t mainDisplayID(void)
+{
+    NSDictionary *screenDescription = [[NSScreen mainScreen] deviceDescription];
+    return [screenDescription[@&quot;NSScreenNumber&quot;] unsignedIntValue];
+}</code></pre>
+
+<h3 id="butwait🤔">But wait 🤔</h3>
+
+<p>There&#8217;s one more caveat: OS X caches a desktop image aggressively. This means that if you, for example, have rotated the image and now want to re-apply it as a wallpaper (to reflect changes), you won’t succeed. The only way to make the OS to pick up your changes is to flush its cache manually by doing something like this:</p>
+<pre><code class="(null)">// 0) Update the affected image&apos;s modification date
+// (if you haven&apos;t already)
+NSDictionary *attrs  = @{NSFileModificationDate : [NSDate new]};
+[[NSFileManager defaultManager] setAttributes: attrs
+                                 ofItemAtPath: path
+                                        error: &amp;error];
+
+// 1) Now remove &quot;ImageFilePath&quot; key from the display specs:
+CFDictionaryRef currentSpecs =
+    (__bridge NSDictionary *)DesktopPictureCopyDisplay(mainDisplayID(), 0x0);
+NSDictionary *newSpecs =
+    [currentSpecs mtl_dictionaryByRemovingValuesForKeys: @[@&quot;ImageFilePath&quot;]];
+DesktopPictureSetDisplay(mainDisplayID(),
+                         (__bridge CFDictionaryRef)(newSpecs), 1, 1);
+</code></pre>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p>as for 10.11.4 <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+
+
+</body>
+</html>
