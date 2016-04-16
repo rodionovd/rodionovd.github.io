@@ -18,6 +18,7 @@ Thus if we want to work around this issue we have to use the same APIs:
 ```
 /// Returns a copy of current display specs for the given display
 extern CFDictionaryRef DesktopPictureCopyDisplay(uint32_t displayID, uint32_t unknown);
+
 /// Sets current display specs for the given display
 extern void DesktopPictureSetDisplay(uint32_t displayID, CFDictionaryRef specs, uint32_t unknown, uint32_t unknown2);
 ```
