@@ -1,4 +1,4 @@
-[home](./index.html) • [about me](./me.html)
+[home](/index.html) • [about me](/me.html)
 
 -------
 
