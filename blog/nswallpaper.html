@@ -23,7 +23,7 @@ rdar://24353557</p>
 
 <h3 id="theworkaround">The Workaround</h3>
 
-<p>The reason for the bug as far as I understand it is the above mentioned preference pane setting an extended display flag <code>NoImage</code> (using <code>DesktopPictureSetDisplay()</code> Carbon API) when applying a solid color wallpaper while <code>NSWorkspace</code>’s methods <em>don’t clean this flag up</em> before making changes so the <em>visible</em> desktop image remains the same (these methods report success though).</p>
+<p>The reason for the bug as far as I understand it is the above mentioned preference pane setting an extended display flag <code>NoImage</code> (using <code>DesktopPictureSetDisplay()</code> Carbon API) when applying a solid color wallpaper while <code>NSWorkspace</code>’s methods <em>don’t reset this flag</em> before making changes so the <em>visible</em> desktop image remains the same (these methods report success though).</p>
 
 <p>Thus if we want to work around this issue we have to use the same APIs:</p>
 <pre><code class="(null)">/// Returns a copy of current display specs for the given display
