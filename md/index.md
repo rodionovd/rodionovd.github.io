@@ -15,6 +15,7 @@ My résumé is available [here](./me.html).
 
 #### Blog
 
+* 04/16/16 — [Updating Desktop Wallpaper with NSWorkspace](/blog/nswallpaper.html)
 * 11/03/15 — [Crashing OS X with DTrace’s speculations](/blog/dtrace-crash.html)
 * 10/12/15 — [DTrace vs. System Integrity Protection](/blog/dtrace-vs-sip.html)
 * 07/19/15 — [Who am I?](/blog/who-am-i.html)
