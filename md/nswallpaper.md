@@ -7,7 +7,7 @@
 > tl;dr: it's tricky sometimes
 > rdar://24353557
 
-I'm not any good at writing inspiring introductions of my blog posts, so there’s a bug in `-[NSWorkspace setDesktopImageURL:forScreen:options:error]` [^ as for 10.11.4] that prevents a new wallpaper from appearing if the previous desktop image was a custom plain color (set via «Desktop & Screen Saver» preferences pane; use a color palette to choose any non-standard color).
+I'm not any good at writing inspiring introductions for my blog posts, so there’s a bug in `-[NSWorkspace setDesktopImageURL:forScreen:options:error]` [^ as for 10.11.4] that prevents a new wallpaper from appearing if the previous desktop image was a custom plain color (set via «Desktop & Screen Saver» preferences pane; use a color palette to choose any non-standard color).
 
 ### The Workaround
 
