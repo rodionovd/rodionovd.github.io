@@ -74,7 +74,7 @@ static uint32_t mainDisplayID(void)
 
 ### But wait 🤔
 
-There's one more caveat: OS X caches a desktop image aggressively. This means that if you, for example, have rotated the image and now want to re-apply it as a wallpaper (to reflect changes), you won’t succeed. The only way to make the OS to pick up your changes is to flush its cache manually by doing something like this:
+There's one more caveat: OS X caches desktop wallpapers aggressively. This means that if you, for example, have rotated the image and now want to re-apply it as a wallpaper (to reflect changes), you won’t succeed. The only way to make the OS to pick up your changes is to flush its cache manually by doing something like this:
 
 ```
 // 0) Update the affected image's modification date
