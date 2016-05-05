@@ -86,7 +86,7 @@ var newFrame = artboard.frame().copy()
 // now you can modify `newFrame` and `artboard.frame()` will remain the same
 ```
 
-## It helps if you know Cocoa a bit
+### It helps if you know Cocoa a bit
 
 Let's figure out how to change a font of the first word in a text label. The offical documentation for [`MSTextLayer`](http://developer.sketchapp.com/reference/MSTextLayer/) is a joke: «only the most basic of properties have yet been exposed», so we have to use something different.
 
