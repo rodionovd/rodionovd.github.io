@@ -15,6 +15,7 @@ My résumé is available [here](./me.html).
 
 #### Blog
 
+* 05/05/16 - [Sketch Plugins: tips &amp; tricks](/blog/sketch-plugins.html)
 * 04/16/16 — [Updating Desktop Wallpaper with NSWorkspace](/blog/nswallpaper.html)
 * 11/03/15 — [Crashing OS X with DTrace’s speculations](/blog/dtrace-crash.html)
 * 10/12/15 — [DTrace vs. System Integrity Protection](/blog/dtrace-vs-sip.html)
