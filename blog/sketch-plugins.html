@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="creator" content="Marked.app"/>
+	<title>Sketch Plugins: tips &amp; tricks</title>
+	<link rel="stylesheet" href="/css/main.css" type="text/css" />
+</head>
+<body>
+
+<p><a href="/index.html">home</a> • <a href="/me.html">about me</a></p>
+
+<hr />
+
+<h1 id="header">Sketch Plugins: tips &amp; tricks</h1>
+
+<p>A few weeks ago I was asked by a client to build an automation plugin for <a href="https://sketchapp.com">Sketch</a>. Even though I&#8217;m just a casual Sketch user and I don&#8217;t have any real JavaScript experience I thought why not and signed up for it.</p>
+
+<p>And it turned out pretty well I should say. Sure the language for Sketch plugins — <a href="http://developer.sketchapp.com/introduction/cocoascript/">CocoaScript</a> — is a bit crazy since it&#8217;s a mixture of JavaScript and Objective-C; and the documentation is far from perfect but overall it was an enlightening experience. Here I&#8217;d like to share some tips and gotchas (in no particular order) that may help you make your first Sketch plugin.</p>
+
+<h3 id="documentationisnttheonlytruth">Documentation isn&#8217;t the only truth</h3>
+
+<p>Unfortunately the official Sketch.Developer API reference lacks details and doesn&#8217;t expose the whole set of methods available for you <a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a>.</p>
+
+<p>That&#8217;s why I encourage you to take a look on other people&#8217;s code when trying hard to come up with a solution: there&#8217;s a ton of examples and even complete plugins on GitHub &#8211; chances are you aren&#8217;t the first one to implement something. Here&#8217;s a list of resources I&#8217;ve found useful:</p>
+
+<ul>
+<li>First of all, check out <a href="http://developer.sketchapp.com/">the official documentation</a> — it covers the basics and helps with best practices (e.g. debugging)</li>
+<li><a href="https://github.com/turbobabr/Sketch-Plugins-Cookbook">Sketch Plugins Cookbook</a> — list of random tips and tricks</li>
+<li><a href="https://github.com/bomberstudios/sketch-commands">Sketch Commands</a> — a lot of ready-to-use code samples to build your plugin upon</li>
+<li><a href="https://github.com/utom/sketch-measure">Sketch Measure</a> — just an awesome plugin with rich functionality so you&#8217;ll probably find something there</li>
+</ul>
+
+<h3 id="usesymboliclinktoyourin-progressplugin">Use symbolic link to your in-progress plugin</h3>
+
+<p>It&#8217;s awkward to copy paste your plugin into Sketch directory after every change. It&#8217;s even more awkward to store your repository there. What worked for me is a symlink:</p>
+<pre><code># go to the Plugins directory
+$ cd ~/Library/Application\ Support/com.bohemiancoding.sketch3/Plugins
+# and create an alias for your plugin from ~/Projects here</h1>
+$ ln -s ~/Projects/MyAwesome.sketchplugin MyAwesome.sketchplugin</code></pre>
+
+<h3 id="dontthroweverythingintoonegiantfile">Don&#8217;t throw everything into one giant file</h3>
+
+<p><a href="https://github.com/utom/sketch-measure">Sketch Measure</a>, despite being a great plugin, has one downside: basically the whole codebase is inside a single file with <em>more than 2500 lines of code</em>. Now try to understand what&#8217;s happening there 🤔</p>
+
+<p>What I recommend doing instead is breaking your code into small independent modules in separate files, so they look like mini libraries. Now when you need one of them just use <code>@import</code>:</p>
+<pre><code>@import &apos;lib/clipboard.js&apos;
+@import &apos;../file-from-parent-directory.js&apos;</code></pre>
+
+<h3 id="arraysarrays">Arrays, Arrays</h3>
+
+<p>Some Sketch APIs will return you an array in terms of JavaScript, but other ones may return you a bridged Objective-C array. The latter requires more boilerplate since it doesn&#8217;t even support element access via <code>[]</code> (we have to use <code>objectAtIndex()</code> instead) or easy enumerations (<code>forEach</code> vs <code>enumerateObjectsUsingBlock</code>, huh?), so I always convert these into native JavaScript arrays and enjoy my <code>map()</code>s, <code>filter()</code>s and <code>forEach()</code>es:</p>
+<pre><code>// TODO: make sure we have an Objective-C array in the first place
+function toJSArray(nsarray)
+{
+ var result = []
+ for (var i = 0; i &lt; nsarray.count(); i++) {
+ result.push(nsarray.objectAtIndex(i))
+ }
+ return result
+}
+
+<p>// Usage is straightforward:</p>
+var artboardNames = toJSArray(artboards).map(function(x){
+ return x.name()
+})</code></pre>
+
+<h3 id="framevsabsoluterect"><code>frame()</code> vs <code>absoluteRect()</code></h3>
+
+<p>Make sure you trully understand the difference between these two: the former is said to <a href="http://developer.sketchapp.com/reference/MSLayer/#frame-readonly">«determine size and position on the canvas»</a> but the position it holds isn&#8217;t in absolute canvas coordinates. So if you&#8217;re going to do any business with layers where their location matters, use <a href="http://developer.sketchapp.com/reference/MSLayer/#absoluterect-readonly"><code>absoluteRect()</code></a> instead of <code>frame()</code>.</p>
+
+<h3 id="onemoreonframes:theyreobjectsnotstructs">One more on frames: they&#8217;re objects, not structs</h3>
+
+<p>In Cocoa frames are represented as structs — value types, so when you assign one frame to another you actually copy its value. In CocoaScript frames are objects — reference types, so when an assignment doesn&#8217;t copy their values and you may end up with two variables referencing the same object in memory:</p>
+<pre><code>var newFrame = artboard.frame()
+newFrame.x = 191
+if (newFrame.x() === artboard.frame().x()) {
+ log(&quot;This will print since artboard.frame() and newFrame lead to the same object&quot;)
+}</code></pre>
+
+<p>So don&#8217;t forget to <code>copy()</code> your frames when you actually need a copy:</p>
+<pre><code>var newFrame = artboard.frame().copy()
+// now you can modify <code>newFrame</code> and <code>artboard.frame()</code> will remain the same</code></pre>
+
+<h2 id="ithelpsifyouknowcocoaabit">It helps if you know Cocoa a bit</h2>
+
+<p>Let&#8217;s figure out how to change a font of the first word in a text label. The offical documentation for <a href="http://developer.sketchapp.com/reference/MSTextLayer/"><code>MSTextLayer</code></a> is a joke: «only the most basic of properties have yet been exposed», so we have to use something different.</p>
+
+<p>Let&#8217;s start with a tool <a href="http://stevenygard.com/projects/class-dump/"><code>class-dump</code></a><a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a>: it generates header files for Objective-C classes in a given application or framework. We don&#8217;t need headers for <em>everything</em> inside Sketch.app, so let&#8217;s filter the results with <code>-C</code> argument:</p>
+<pre><code>$ class-dump -C MSTextLayer /Applications/Sketch.app &gt; MSTextLayer.h &amp;&amp; open -e MSTextLayer.h</code></pre>
+
+<p>this command will dump the headers for classes which names include &#8220;MSTextLayer&#8221; into MSTextLayer.h and then open this file for you.</p>
+
+<p>Now search for «@interface MSTextLayer» — you&#8217;ll come across this eventually:</p>
+<pre><code>@interface MSTextLayer : _MSTextLayer &lt;&#8230;&gt;
+{
+&#8230;
+}</code></pre>
+
+<p>Let&#8217;s skim through the list of available methods:</p>
+<pre><code>&#8230;
+- (BOOL)useProportionalResizingFromCorner:(long long)arg1;
+- (BOOL)constrainProportions;
+- (id)usedFonts;
+- (BOOL)treatAsShiftedForCorner:(long long)arg1 onlyForFlexible:(BOOL)arg2;
+- (void)calculateTextIsClippedAfterResizeFromCorner:(long long)arg1;
+- (void)resizeFontToFitFromRect:(struct CGRect)arg1;
+- (void)layerDidResizeFromRect:(struct CGRect)arg1 corner:(long long)arg2;
+- (void)replaceTextPreservingAttributeRanges:(id)arg1;
+- (void)makeLowercase:(id)arg1;
+- (void)makeUppercase:(id)arg1;
+- (void)multiplyBy:(double)arg1;
+- (id)attributeForKey:(id)arg1;
+- (void)addAttribute:(id)arg1 value:(id)arg2;
+- (void)addAttributes:(id)arg1 forRange:(struct <em>NSRange)arg2;
+- (void)setAttributes:(id)arg1 forRange:(struct </em>NSRange)arg2;
+- (void)addAttribute:(id)arg1 value:(id)arg2 forRange:(struct _NSRange)arg3;
+&#8230;</code></pre>
+
+<p>Hah, noticed anything? I did: it&#8217;s <code>addAttributes:forRange:</code> which looks like the <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableAttributedString_Class/#//apple_ref/occ/instm/NSMutableAttributedString/addAttributes:range:">method on <code>NSMutableAttributedString</code></a>. Let&#8217;s try to use for our own profit!</p>
+<pre><code>var label = group.addLayerOfType(&quot;text&quot;)
+// &#8230;
+var attributes = {&quot;NSFont&quot; : [NSFont fontWithName: &quot;HelveticaNeue-Bold&quot; size:18]}
+[label addAttributes: attributes
+ forRange: NSMakeRange(0, N)]</code></pre>
+
+<p>Hooray! Now the first N characters of your label are bold 💎</p>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p>It may be that the plugins API is constantly evolving and thus unstable yet, but on the other hand it hasn&#8217;t been updated much recently, so why limit yourself? <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:2">
+<p>You can install <code>class-dump</code> with Homebrew: <code>brew install class-dump --HEAD</code> <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+
+
+</body>
+</html>
