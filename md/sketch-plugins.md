@@ -3,6 +3,8 @@
 -------
 # Sketch Plugins: tips & tricks
 
+<center>![Sketch icon](http://i.imgur.com/4NnEbfE.png)</center>
+
 A few weeks ago I was asked by a client to build an automation plugin for [Sketch](https://sketchapp.com). Even though I'm just a casual Sketch user and I don't have any real JavaScript experience I thought why not and signed up for it.
 
 And it turned out pretty well I should say. Sure the language for Sketch plugins — [CocoaScript](http://developer.sketchapp.com/introduction/cocoascript/) — is a bit crazy since it's a mixture of JavaScript and Objective-C; and the documentation is far from perfect but overall it was an enlightening experience. Here I'd like to share some tips and gotchas (in no particular order) that may help you make your first Sketch plugin.
