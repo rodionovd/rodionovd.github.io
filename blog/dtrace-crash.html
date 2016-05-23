@@ -47,6 +47,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 <body>
 <p><a href="/index.html">Home</a></p>
+<article>
 <h1 id="crashing-os-x-with-dtraces-speculations">Crashing OS X with DTrace’s speculations</h1>
 <p>A few months ago I was struggling to work around DTrace’s «no-printfs-in-conditions» limitation. One can easily stumble across this by trying to conditionally print something:</p>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c">this-&gt;flag == <span class="dv">1</span>
@@ -99,5 +100,6 @@ syscall::open:<span class="kw">return</span>
 <li id="fn1"><p>as of OS X 10.9.x, 10.10.x and 10.11 (with SIP disabled)<a href="#fnref1">↩</a></p></li>
 </ol>
 </div>
+</article>
 </body>
 </html>

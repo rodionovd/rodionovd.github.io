@@ -47,6 +47,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 <body>
 <p><a href="/index.html">Home</a></p>
+<article>
 <h1 id="dtrace-vs.-system-integrity-protection">DTrace vs. System Integrity Protection</h1>
 <h2 id="the-problem">The Problem</h2>
 <p>As you may now Apple released their new OS X revision 10.11 this year with a great security feature built-in: <a href="https://en.wikipedia.org/wiki/System_Integrity_Protection">System Integrity Protection</a>. In a nutshell, this mechanism protects any system data and important filesystem components (like <code>/System</code> or <code>/usr</code>) from being modified by user; even if they are <em>root</em>. SIP also disables any use of code-injection and debugging techniques for third-party software, so some of your favorite hacks may not work anymore.</p>
@@ -129,5 +130,6 @@ $ <span class="kw">csrutil</span> enable --no-internal</code></pre></div></li>
 <li id="fn1"><p>Well, actually Apple have been using PT_DENY_ATTACH <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man2/ptrace.2.html"><code>ptrace()</code></a> flag for iTunes&amp;co. for a while now (since 10.5, IIRC) which also prevents debuggers and DTrace from attaching to these programs. But it was <a href="http://landonf.bikemonkey.org/code/macosx/Leopard_PT_DENY_ATTACH.20080122.html">quite easy</a> to bypass.<a href="#fnref1">↩</a></p></li>
 </ol>
 </div>
+</article>
 </body>
 </html>
