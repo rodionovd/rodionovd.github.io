@@ -2,8 +2,6 @@
 
 I’m Dmitry Rodionov, I build software for Macs.
 
-> I’m looking for a summer internship position (anything Mac-related) right now. Please, let me know if your company’s looking for an intern.
-
 I’m available for OS X consulting/contracting work. Ping me if you need something done on the platform.
 Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage:i.am.rodionovd@gmail.com). I’m also open for [emails](mailto:i.am.rodionovd@gmail.com).
 

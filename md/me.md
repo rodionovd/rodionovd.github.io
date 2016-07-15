@@ -1,8 +1,6 @@
 # Hi there🖖
 
-I’m Dmitry Rodionov, I build software for Macs.
-
-> I’m looking for a summer internship position (anything Mac-related) right now. Please, let me know if your company’s looking for an intern.
+I’m Dmitry Rodionov, I build software for Mac.
 
 ### Contracting
 
@@ -16,7 +14,7 @@ Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage
 
     I’ve been building/fixing system utilities and Cocoa applications for clients.
 
-    Those projects include (among others): network daemons, Mail.app plugins, WebKit-based wrappers, Finder extensions, VPN clients, Accessibility-enabled helpers and automation software.
+    Those projects include (among others): network daemons, Mail and Sketch plugins, WebKit-based wrappers, Finder extensions, VPN clients, Accessibility-enabled helpers and automation software.
 
 * **Summer 2015, intern @ Cuckoo Foundation Inc.**
 
@@ -31,6 +29,14 @@ I’ve been maintaining a pretty set of open-source libraries and applications. 
   A Mac app for discovering Japanese emoticons the fun way `ヽ(=^･ω･^=)丿`. Daruma allows you to search for emoticons by their labels, copy them to the clipboard or just drag’n’drop into other applications like Safari or Messages and many more!
 
   > Keywords: *NSCollectionView, glyphs cache, text drawing and full keyboard access*.
+
+* [States](http://states.design)
+
+  A plugin for Sketch that allows you to create different states for artboards and switch between them easily. Just like Layer Comps.
+
+  Built in cooperation with [Eden Vidal](http://edenvidal.com).
+
+  > Keywords: *Sketch, NSTableView, plugin and method swizzling*
 
 * [`SWRoute`](https://github.com/rodionovd/SWRoute)  
 
