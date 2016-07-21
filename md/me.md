@@ -58,7 +58,7 @@ I’ve been maintaining a pretty set of open-source libraries and applications. 
 
   > Keywords: *`task_for_pid()`, handling exceptions in a remote process, modifying a thread state, not saying that `mach_inject` is bad, but…*.
 
-* [Locatr](http://internals.exposed/locatrapp/)  
+* [Locatr](http://internals.exposed/locatr/)  
 
    A Cocoa app for faking your geolocation on Mac. Wonna tweet from the North Pole? Give it a chance!
 
