@@ -6,7 +6,7 @@ I’m Dmitry Rodionov, I build software for Mac.
 
 I’m available for OS X consulting/contracting work. Ping me if you need something done on the platform.
 
-Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage:i.am.rodionovd@gmal.com). I’m also open for [emails](mailto:i.am.rodionovd@gmail.com).
+Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage:i.am.rodionovd@gmal.com). I’m also open for [emails](mailto:i.am.rodionovd@gmail.com) [^Here's my [PGP public key](./pgp.html) if you're into this]
 
 ### Experience
 
@@ -74,4 +74,4 @@ I'm studying Computer Science in Tomsk State University, B.S. @ 2013–2017.
 
 -------
 
-[Home](./index.html)
+[Back to Internals Exposed](./index.html)
