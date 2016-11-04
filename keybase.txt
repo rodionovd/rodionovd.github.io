@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/rodionovd
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://internals.exposed
+  * I am rodionovd (https://keybase.io/rodionovd) on keybase.
+  * I have a public key with fingerprint 8BD3 E0B1 1D4C 3D1E D9D2  B766 071C 9F8F DF49 8625
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010109fbe8862a298e0536ba8281ca7b548cd57e1a67060ac77aad224c38b6162b4d0a",
+            "fingerprint": "8bd3e0b11d4c3d1ed9d2b766071c9f8fdf498625",
+            "host": "keybase.io",
+            "key_id": "071c9f8fdf498625",
+            "kid": "010109fbe8862a298e0536ba8281ca7b548cd57e1a67060ac77aad224c38b6162b4d0a",
+            "uid": "eaddfefc85cafa9412fdac35df30f919",
+            "username": "rodionovd"
+        },
+        "service": {
+            "hostname": "internals.exposed",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1478248681,
+    "expire_in": 157680000,
+    "prev": "6e9d2bec21fce44459c79d0fd4f114e74cbafbe66a92b27e263e65251f52f64b",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtkm1QVFUYxxcM0XUJaxmNGUi7KzgEwn1/2dHGKEsgaMS1iUy3e+85Fy4ve2F3
+eRPwZUQUgljQIAiirEmG0gppYcQYG3YYGhiJIZYYDRSwgUkG8yVmEqh7zT71tXM+
+nDnP+T3/53n+c1wBq3R6H/+QlurJuLIwn4E5QfdmyO7lIkRQQCFiLkIy4KMDZgLo
+cFozZICYERRTNycJkGVpnMc5FqIUQQs8i7OYyDMCRbIioBiI8TSD0igvMgzPAxwn
+RYIVaIzGBRKgPBKFSLItFdqz7bLNqcqyAiAgKmAYUEGAQcABXGBoGmUwkZNYCUgk
+pxak1MQ0xaFlqM0JvANGy4oaUy/Wf9r7L/8/9537SA7yAEhQEllK5CWeIzFcArxI
+UEAiUInDOA10QLuNz4IqbVeArNiUPICURCFqOE8WoeasNspjRLVBwzMd0bAgW3FA
+oCpk2xWnIiqZ6nOa05lt1rKdhdkang8F62MhqyDbgGqmmpAH7Q61EGLGVFJ0ypoy
+RjIsTrI0i0UhqrRsh1ZZIyiGZlF1aWVgnipJwwOa6VDEMUmEJElSnMhwAJUAKWEY
+CRlSFHjVQJrmOVzAGYjTBKQpnMIkCpdoUkC02XJsCmIm1T75VFXTIafaeGeuHSIl
++nLfkCd0Pnrdaj9f7Zvp9GvX//v3grcFruDJCYnFqyPCeg893Ny3JulUVktnTOL6
+sNnXJkdexTL6lq5mtTVt8R5bEzFsmZpYSr74scXrarhcbzA0m/xDxdr077cbF4jo
+W8dr8OmnGxdev2P55Kn6Z5tPuH/IsIxX/xU/bY58p99evrbgmvcj7L1206Wy8BvC
+xejNQz1R+w5X/vlilNDUVxTxc2XX1tgXRisIdwB9AcUikw8F1+yqGvVY89qbiMbw
+pITbXUfaPYPHv5hwt4Vu2thKR8ToVvZmzSwbn9HdTHff8laYDMIZ4ujCYr9fUMx9
+MHdA3FXheuBF40OGzuJNN8Z/Srw7ONN/+sc9v1w7YydSrps2eBIXJ69E1F49uVKe
+Pvc5WhnJ1brunieOcB5f49m3vus6+kFveoG7aKMxBavKitn64H3FtCXf39tcM7ap
+9ASR25Z8bqjSNl5dkZO0HLpuuPTbO591jiUv7fvyuW9GvwoaxtL98rfrt10v+y3N
+ZeleOvhyd0DPYkvdSyuHxdngOcPUuyXe/VXzB3viEgJ3ht5LsewxtYInd9w8HHcO
+fPp1ydvrjL9WejyB5OXUcFdH3cL8h4bpC0EpE3vZ+Q7qeSM7eLvsjb7uk/c7xool
+fWkn2D+zas41sSG+ofhSIdN7Pryhte50o9c9HjIfOzKQ80fhw4HZMObeK8eI1s7U
++inDqd2xOwGXb99x5feR1r8B
+=DkXw
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rodionovd
+
+==================================================================
