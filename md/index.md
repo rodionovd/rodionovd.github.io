@@ -3,7 +3,8 @@
 I’m Dmitry Rodionov, I build software for Macs.
 
 I’m available for OS X consulting/contracting work. Ping me if you need something done on the platform.
-Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage:i.am.rodionovd@gmail.com). I’m also open for [emails](mailto:i.am.rodionovd@gmail.com) [^Here's my [PGP public key](./pgp.html) if you're into this]
+
+Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage:i.am.rodionovd@gmal.com). I’m also open for [emails](mailto:i.am.rodionovd@gmail.com) ([PGP](./pgp.html))
 
 
 #### TL;DR
