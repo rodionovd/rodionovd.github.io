@@ -1,76 +1,45 @@
-# Hi there🖖
+# Dmitry Rodionov
 
-I’m Dmitry Rodionov, I build software for Mac.
+I write Mac software including low level system utilities in C and user-facing Cocoa applications in Objective-C and Swift.
 
-### Contracting
+I'm interesting in both high level architecture of software and its internal implementation so I don't hesitate to read disassembly listings to figure out how closed-source code works. I'm very independent and good at figuring out solutions to problems on my own.
 
-I’m available for OS X consulting/contracting work. Ping me if you need something done on the platform.
+### Contact
 
-Let’s chat [on Twitter](https://twitter.com/rodionovme) or [Messages](imessage:i.am.rodionovd@gmal.com). I’m also open for [emails](mailto:i.am.rodionovd@gmail.com) ([PGP](./pgp.html))
+Twitter: [@rodionovme](https://twitter.com/rodionovme)
+Website: [http://internals.exposed](http://internals.exposed)
+Email: [i.am.rodionovd@gmail.com](mailto:i.am.rodionovd@gmail.com) (PGP [available](./pgp.html))
+Phone: +7-906-955-21-72 (Russian)
 
-### Experience
+I'm located in Tomsk, Russia but willing to relocate to anywhere.
 
-* **December 2011 — now, contractor Mac developer**
+### Experiences
 
-    I’ve been building/fixing system utilities and Cocoa applications for clients.
+* Part-time contracting, *2011–today*
+	* Working as a contractor for clients around the globe, solving issues in existing codebases and building new projects from scratch including Mac and iOS applications and libraries.
+* Summer internship at [Cuckoo Foundation](http://www.cuckoofoundation.org), *May-September 2015*
+	* Implemented a malware analysis module for OS X based on DTrace
 
-    Those projects include (among others): network daemons, Mail and Sketch plugins, WebKit-based wrappers, Finder extensions, VPN clients, Accessibility-enabled helpers and automation software.
+### Open-source
 
-* **Summer 2015, intern @ Cuckoo Foundation Inc.**
+I maintain a bunch of open-source projects on [GitHub](https://github.com/rodionovd), among them are:
 
-    I was responsible for building an OS X malware analyzer for [Cuckoo Sandbox](http://www.cuckoosandbox.org/) as part of my Google Summer of Code project.
-
-    Wrote tons of Python code and put together some tricky DTrace hacks. Source code is available [on GitHub](https://github.com/rodionovd/cuckoo-osx-analyzer) (**UPD:** *merged into [upsteam](https://github.com/cuckoosandbox/cuckoo) now*).
-
-I’ve been maintaining a pretty set of open-source libraries and applications. Here’re my favorites:
-
-* [Daruma](http://internals.exposed/daruma)
-
-  A Mac app for discovering Japanese emoticons the fun way `ヽ(=^･ω･^=)丿`. Daruma allows you to search for emoticons by their labels, copy them to the clipboard or just drag’n’drop into other applications like Safari or Messages and many more!
-
-  > Keywords: *NSCollectionView, glyphs cache, text drawing and full keyboard access*.
-
-* [States](http://states.design)
-
-  A plugin for Sketch that allows you to create different states for artboards and switch between them easily. Just like Layer Comps.
-
-  Built in cooperation with [Eden Vidal](http://edenvidal.com).
-
-  > Keywords: *Sketch, NSTableView, plugin and method swizzling*
-
-* [`SWRoute`](https://github.com/rodionovd/SWRoute)  
-
-  A PoC of function hooking in pure Swift.
-
-  > Keywords: *Swift internals, memory manipulations, Swift reverse-engineering, no Objective-C runtime involved*.
-
-* [`liblorgnette`](https://github.com/rodionovd/liblorgnette)  
-
-  Remote symbolication for both OS X and iOS.  
-
-  It works like `dlsym()`, but for any process running on your system.
-
-  > Keywords: *dyld API (process images, building nlists from scratch, symbolication, etc), Mach-O internals*
-
-* [`task_vaccine`](https://github.com/rodionovd/task_vaccine)  
-
-  A lightweight code injection library.  
-
-  > Keywords: *`task_for_pid()`, handling exceptions in a remote process, modifying a thread state, not saying that `mach_inject` is bad, but…*.
-
-* [Locatr](http://internals.exposed/locatr/)  
-
-   A Cocoa app for faking your geolocation on Mac. Wonna tweet from the North Pole? Give it a chance!
-
-  > **UPD:** Locatr has stopped working on El Capitan due to System Integrity Protection restrictions. What a loss!
-
-### Writing & Speaking
-
-I have [a blog](http://internals.exposed) where I share my knowledge about programming, tools and other totally unrelated stuff.
+* [mas](https://github.com/mas-cli/mas): a command-line interface for Mac App Store
+	* Built in Swift 3 on top of reverse-engineered MAS frameworks
+* [Daruma](http://internals.exposed/daruma/): a Mac app for browsing awesome japanese emoticons
+	* Built in Objective-C using modern AppKit components
+* [States](https://github.com/edenvidal/States): this Sketch.app plugin adds support for states on artboards
+	* Built in JavaScript/Objective-C mix, includes a lot of AppKit UI customization
+* [shortcuts](https://github.com/rodionovd/shortcuts): a command line interface to text replacements on macOS
+	* An automation-friendly re-implementation of Keyboard.prefpane's Text tab
+* [task_vaccine](https://github.com/rodionovd/task_vaccine/): a lightweight code injection library for macOS
+	* Uses Mach Memory and Threads
+* [liblorgnette](https://github.com/rodionovd/liblorgnette/): a library for interprocess symbol lookup for iOS and macOS
+	* Heavy use of dyld APIs for working with process images and building nlists
 
 ### Education
 
-I'm studying Computer Science in Tomsk State University, B.S. @ 2013–2017.
+I'm a final year undergraduate student of [Tomsk State University](http://en.tsu.ru) pursuing my BS degree in Computer Science with expected graduation date of June 2017.
 
 -------
 
