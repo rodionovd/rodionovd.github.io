@@ -2,7 +2,7 @@
 
 I write Mac software including low level system utilities in C and user-facing Cocoa applications in Objective-C and Swift.
 
-I'm interesting in both high level architecture of software and its internal implementation so I don't hesitate to read disassembly listings to figure out how closed-source code works. I'm very independent and good at figuring out solutions to problems on my own.
+I'm interested in both high level architecture of software and its internal implementation so I don't hesitate to read disassembly listings to figure out how closed-source code works. I'm very independent and good at figuring out solutions to problems on my own.
 
 ### Contact
 
