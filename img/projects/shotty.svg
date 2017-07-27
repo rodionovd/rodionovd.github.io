@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1006px" height="1006px" viewBox="0 0 1006 1006" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1024" height="1024"></rect>
+        <filter x="-1.4%" y="-1.0%" width="102.9%" height="102.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.298035553 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#00EBF7" offset="0%"></stop>
+            <stop stop-color="#00D3ED" offset="100%"></stop>
+        </linearGradient>
+        <path d="M557.218667,0 C808.613856,0 971.678832,163.064976 971.678832,414.460165 L971.678832,557.218667 C971.678832,808.613856 808.613856,971.678832 557.218667,971.678832 L414.460165,971.678832 C163.064976,971.678832 0,808.613856 0,557.218667 L0,414.460165 C0,163.064976 163.064976,0 414.460165,0 L557.218667,0 Z" id="path-5"></path>
+    </defs>
+    <g id="Production:-States-+-Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shotty_app_icon_1024x1024" transform="translate(-9.000000, -13.000000)">
+            <g id="Group-5">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="mask" opacity="0.295125933"></g>
+                <g id="icon_content" filter="url(#filter-3)" mask="url(#mask-2)">
+                    <g transform="translate(512.000000, 512.000000) rotate(-7.000000) translate(-512.000000, -512.000000) translate(26.160584, 26.160584)">
+                        <g id="Group">
+                            <mask id="mask-6" fill="white">
+                                <use xlink:href="#path-5"></use>
+                            </mask>
+                            <use id="Rectangle-5" fill="url(#linearGradient-4)" xlink:href="#path-5"></use>
+                            <g id="Group-2" mask="url(#mask-6)">
+                                <g transform="translate(134.540146, 221.742092)">
+                                    <path d="M573.914669,180.349237 C608.263062,180.349237 630.542803,202.639961 630.542803,237.005286 L630.542803,523.68489 C630.542803,558.050215 608.263062,580.340938 573.914669,580.340938 L115.226786,580.340938 C80.8783938,580.340938 58.5986525,558.050215 58.5986525,523.68489 L58.5986525,237.005286 C58.5986525,202.639961 80.8783938,180.349237 115.226786,180.349237 L573.914669,180.349237 Z" id="Rectangle-6-Copy-2" fill="#9CF1F9" opacity="0.611881996"></path>
+                                    <path d="M608.283308,84.7347535 C647.269191,84.7347535 672.556994,110.035022 672.556994,149.040123 L672.556994,474.425293 C672.556994,513.430394 647.269191,538.730663 608.283308,538.730663 L87.6664503,538.730663 C48.6805673,538.730663 23.3927641,513.430394 23.3927641,474.425293 L23.3927641,149.040123 C23.3927641,110.035022 48.6805673,84.7347535 87.6664503,84.7347535 L608.283308,84.7347535 Z" id="Rectangle-6" fill="#D8F9FC" opacity="0.63386194"></path>
+                                    <path d="M634.15673,0 C676.42645,0 703.844282,27.4313473 703.844282,69.7219049 L703.844282,422.514744 C703.844282,464.805301 676.42645,492.236649 634.15673,492.236649 L69.6875527,492.236649 C27.4178318,492.236649 0,464.805301 0,422.514744 L0,69.7219049 C0,27.4313473 27.4178318,0 69.6875527,0 L634.15673,0 Z" id="Rectangle-6-Copy" fill="#FFFFFF"></path>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="Group-3" transform="translate(171.912409, 256.622871)">
+                            <ellipse id="Oval" fill="#FF6059" cx="30.8321168" cy="31.1499737" rx="30.8321168" ry="31.1499737"></ellipse>
+                            <ellipse id="Oval-Copy" fill="#FFBD2E" cx="128.311436" cy="31.1499737" rx="30.8321168" ry="31.1499737"></ellipse>
+                            <ellipse id="Oval-Copy-2" fill="#28CA42" cx="225.790754" cy="31.1499737" rx="30.8321168" ry="31.1499737"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
