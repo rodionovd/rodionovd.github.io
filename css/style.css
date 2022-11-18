@@ -1,22 +1,26 @@
 :root,
 html {
-    font-size: 17px;
+    font-size: default;
 }
 
 body {
-    color: black;
+    color: #333333;
     background: white;
-    font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.7;
-}
-
-
-.container {
+    line-height: 1.5;
     max-width: 50rem;
     padding: 2em;
     margin: auto;
+}
+
+.flipped {
+    display: inline-block;
+    -moz-transform:    scaleX(-1);
+    -o-transform:      scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform:         scaleX(-1);
 }
 
 .container header h1 {
@@ -33,9 +37,29 @@ body {
     padding-top: 1rem;
 }
 
+.note {
+    background-color: cornsilk;
+    border-radius: 4pt;
+    padding: 4pt;
+}
+
+.soon {
+    font-size: x-small;
+}
+
+/* Header */
+
+.photo {
+    text-align: center;
+}
+
+.photo img {
+    border-radius: 50%;
+}
+
 /* Links */
+
 .container a {
-    color: inherit;
     text-decoration: none;
     border-bottom: 1px dotted black;
 }
@@ -43,72 +67,28 @@ body {
     border-bottom: 1px solid black;
 }
 
-/* Sidenotes on profiles */
-
-.kindahidden {
-    color: #aaaaaa;
-}
-
-.kindahidden a {
-    color: #777777;
-}
-
 /* Projects */
 
-table.showcase {
+.showcase {
     width: 100%;
     border-collapse: collapse;
 }
 
-table.showcase tr.logo td {
+.showcase .logo td {
     padding-top: 1.5em;
     text-align: center;
 }
 
-table.showcase tr.description td {
-    font-weight: normal;
-    text-align: center;
+.showcase .description td {
     padding-bottom: 1.5em;
-}
-
-table.showcase td.onethird {
-    width: 33.3%;
-}
-
-table.showcase td.half {
-    width: 50%;
-}
-
-table.showcase td {
-    width: 33.3%;
-    font-weight: lighter;
-    color: #666666;
-}
-
-img.ios {
-    /*box-sizing: border-box;*/
-    border-radius: 20px;
-}
-
-table.showcase tr.logo a {
-    text-decoration: none;
-    border-bottom: none;
-}
-
-table.showcase tr.logo a:hover {
-    text-decoration: none;
-    border-bottom: none;
-}
-
-.container ul li:not(:last-child) {
-    margin-bottom: 0.3rem;
+    text-align: center;
 }
 
 /* Footer */
 
 footer.footer {
     font-size: 0.8rem;
-    padding-top: 4rem;
+    padding-top: 1rem;
 }
 
 footer.footer a  {

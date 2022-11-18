@@ -4,202 +4,127 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Internals Exposed</title>
+    <title>Dmitry Rodionov</title>
     <meta name="author" content="Dmitry Rodionov">
-    <meta name="description" content="Dmitry Rodionov, a macOS developer and software solution provider.">
+    <meta name="description" content="Dmitry Rodionov, a macOS developer">
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <h1>Hi!</h1>
-            <p>
-                I’m Dmitry Rodionov, a macOS developer and software solution provider.
-            </p>
-        </header>
-        <!-- Hire me section-->
-        <h2>👋 Hire me</h2>
+    <!-- Header -->
+    <header>
+        <div class="photo">
+            <span style="margin-right: -10pt;">👋</span><img src="img/me.jpeg" alt="A photo of myself" width="115"><span class="flipped" style="margin-left: -10pt;">👋</span>
+            <div style="margin-top: -10pt; font-size: 200%;"><span>🦺</span></div>
+        </div>
+        <h1>Hi,</h1>
         <p>
-            I’m <a href="mailto:i.am.rodionovd@gmail.com?subject=I%20want%20to%20hire%20you%20to%20work%20on&hellip;">available</a> for hire!
+            I’m Dmitry Rodionov, a software engineer for Apple platforms.
         </p>
         <p>
-            I work in plenty of different areas: from low–level system utilities and <a href="#reverseengineering">reverse–engineering</a> to rich user-facing <a href="#cocoapps">Cocoa applications</a> and <a href="#sketchplugins">Sketch plugins</a>.
+            I’ve been making macOS apps and tools since 2011; been invovled and led projects for <a href="https://sympli.io" target="_blank">Sympli</a>, <a href="http://www.mentalfaculty.com" target="_blank">Mental Faculty</a>, <a href="http://www.apparentsoft.com" target="_blank">Apparent Software</a>, <a href="http://zipzapmac.com" target="_blank">ZipZapMac</a>, <a href="https://cuckoosandbox.org" target="_blank">Cuckoo Sandbox</a>, <a href="https://www.cirkus.com" target="_blank">farmerswife</a>, <a href="https://www.libxl.com" target="_blank">XLware</a>, <a href="https://www.jacobruiz.design" target="_blank">Jacob Ruiz</a>, <a href="http://www.edenvidal.com" target="_blank">Eden Vidal</a> and dozens other companies and individals globally. I also do <a href="https://github.com/rodionovd">open source</a> occasionally.
         </p>
-        <p>
-             I do care about the end product and take pride in all of my work, no matter if it’s a simple script or a complex software system. Everything I do is <i>crafted</i> and polished to perfectly fit your business needs and make you happy, no less.
-        </p>
-        <p>
-            I’ve been building Mac and iOS solutions since 2011, working on dozens of projects: as a contractor for software shops (<a href="https://sympli.io" target="_blank">Sympli</a>, <a href="http://www.mentalfaculty.com" target="_blank">Mental Faculty</a>, <a href="http://www.apparentsoft.com" target="_blank">Apparent Software</a>, <a href="http://zipzapmac.com" target="_blank">ZipZapMac</a>, <a href="https://www.cirkus.com" target="_blank">farmerswife</a>), as a collaborator with design studios (<a href="https://www.jacobruiz.design" target="_blank">Jacob Ruiz Design</a>, <a href="http://www.edenvidal.com" target="_blank">Eden Vidal</a>, <a href="https://medium.com/@angelomilan" target="_blank">Angelo Milanetti</a>, <a href="https://lstore.graphics" target="_blank">Lstore</a>) and as a solution provider for a lot of companies around the globe (<a href="https://www.upwardmobile.com" target="_blank">Upward Mobile LLC</a>, <a href="http://devv.it" target="_blank">DEVV.IT AB</a>, <a href="http://lenofx.com" target="_blank">LenoFX</a>, <a href="http://www.element26.net" target="_blank">Element TwentySix</a>, <a href="https://www.protodype.com" target="_blank">ProtoDype Limited</a> — just to name a few).
-        </p>
-        <p>
-            <a href="mailto:i.am.rodionovd@gmail.com?subject=I%20want%20to%20hire%20you%20to%20work%20on&hellip;">Drop me a message</a> and let’s create something great together!
-        </p>
-        <!-- Profiles -->
-        <h2>✨ Profiles</h2>
-            <ul>
-                <li><a href="https://twitter.com/rodionovme" target="_blank">@rodionovme</a> on Twitter<span class="kindahidden">, where I usually retweet funny puns and useful programming tips</span></li>
-                <li><a href="https://github.com/rodionovd" target="_blank">rodionovd</a> on GitHub<span class="kindahidden">, where I maintain open source projects such as <a href="https://github.com/mas-cli/mas" target="_blank">mas</a> and <a href="https://github.com/rodionovd/shortcuts" target="_blank">shortcuts</a></span></li>
-                <li><a href="https://www.upwork.com/freelancers/~01b706bec1662829a1" target="_blank">Dmitry Rodionov</a> on UpWork<span class="kindahidden">, where I provide my services to companies and individuals</span></li>
-                <li><a href="mailto:i.am.rodionovd@gmail.com?subject=Hi!">i.am.rodionovd@gmail.com</a> for emails<span class="kindahidden">, which I always read. Here’s my <a href="static/DF498625.asc">PGP key</a></span></li>
-            </ul>
-        <!-- Projects -->
-        <h2>🤖 Projects &amp; Experience</h2>
-            <h3>Keywords</h3>
-            <p>
-                Objective-C, Swift, C, Cocoa, AppKit, Sketch, Sketch Plugins, CocoaScript, Foundation, CoreData, Sandbox, Accessibility, UX, reverse-engineering, testing<span class="kindahidden">, Ruby (for Rake mostly), probably some Python.</span>
-            </p>
-            <h3 id="cocoapps">Mac</h3>
-            <p>
-                Remember the dark times when Interface Builder and Xcode were two separate apps, 32–bit runtime required you to <span>@synthesize</span> your properies manually and all Cocoa programmers had to know when to call -autorelease on things? Yep, I was there.
-            </p>
-            <p>
-                Things have changed drastically since then: now we have pleasant developer tools, new awesome programming languages and <i>a lot of</i> documentation (well even Apple <a href="https://developer.apple.com/swift/blog/" target="_blank">has a blog on Swift</a>!).
-            </p>
-            <p>
-                But what remains (somewhat) the same is AppKit and I really enjoy working with this beautiful beast. My secret is that I always keep a disassembler window open with AppKit.framework loaded into it 🌈 This way I’m sure I know what happens under my feet; how to avoid this and work around that.
-            </p>
-            <p>
-                I also understand how macOS works on the low-level (multithreading, sandboxing, XPC, SIP, launchd, you name it) and this knowledge often serves me well when I build any non-trivial software system that is environment-aware.
-            </p>
-            <p>
-                Here’s a few public macOS projects I took part in recently:
-            </p>
-            <table class="showcase">
-                <!-- 1 row -->
-                <tr class="logo">
-                    <td class="onethird"><img src="img/projects/versions/versions@2x.png" alt="Versions" width="100pt" height="100pt"></td>
-                    <td class="onethird"><img src="img/projects/shotty/shotty@2x.png" alt="Shotty" width="100pt" height="100pt"></td>
-                    <td class="onethird"><img src="img/projects/done_time.svg" alt="Done Time" width="100pt" height="100pt"></td>
-                </tr>
-                <tr class="description">
-                    <td><a href="https://versions.sympli.io" target="_blank">Versions</a></td>
-                    <td><a href="https://meetshotty.com" target="_blank">Shotty</a></td>
-                    <td><a href="https://itunes.apple.com/us/app/done-time/id1222380991" target="_blank">Done Time</a></td>
-                </tr>
-                <!-- 2 row -->
-                <tr class="logo">
-                    <td class="onethird"><img src="img/projects/studies/icon@2x.png" alt="Studies for Mac" width="100pt" height="100pt"></td>
-                    <td class="onethird"><img src="img/projects/memory_cleaner/icon@2x.png" alt="MemoryCleaner" width="100pt" height="100pt"></td>
-                    <td class="onethird"><img src="img/projects/trickster/icon@2x.png" alt="Trickster" width="100pt" height="100pt"></td>
-                </tr>
-                <tr class="description">
-                    <td><a href="http://www.studiesapp.com" target="_blank">Studies for Mac</a></td>
-                    <td><a href="http://zipzapmac.com/MemoryCleaner" target="_blank">MemoryCleaner</a></td>
-                    <td><a href="http://www.apparentsoft.com/trickster" target="_blank">Trickster</a></td>
-                </tr>
-                <!-- 3 row -->
-                <tr class="logo">
-                    <td class="onethird"><img src="img/projects/imageframer/icon@2x.png" alt="ImageFramer" width="100pt" height="100pt"></td>
-                    <td class="onethird"><img src="img/projects/daruma.svg" alt="Daruma" width="100pt" height="100pt"></td>
-                    <td class="onethird"><img src="img/projects/ensembles/icon.png" alt="Ensembles" width="100pt" height="100pt"></td>
-                </tr>
-                <tr class="description">
-                    <td><a href="https://imageframer.net" target="_blank">ImageFramer</a></td>
-                    <td><a href="http://internals.exposed/daruma" target="_blank">Daruma</a></td>
-                    <td><a href="http://www.ensembles.io" target="_blank">Ensembles</a></td>
-                </tr>
-                <!-- 4 row -->
-                <tr class="logo">
-                    <td class="onethird"><a href="mailto:i.am.rodionovd@gmail.com?subject=I%20want%20to%20hire%20you%20to%20work%20on&hellip;"><img src="img/projects/empty_slot.svg" alt="Empty slot" width="100pt" height="100pt"></a></td>
-                </tr>
-                <tr class="description">
-                    <td>Your project here</td>
-                </tr>
-            </table>
-            <h3>iOS</h3>
-            <p>
-                Sometimes I help my clients with iOS applications as well by building new features or solving puzzling issues and refactoring the codebase.
-            </p>
-            <table class="showcase">
-                <tr class="logo">
-                    <td class="onethird"><img class="ios" src="img/projects/archiver/icon@2x.png" alt="Archiver" width="100pt" height="100pt"></td>
-                    <td class="onethird"><img src="img/projects/studies/icon_ios@2x.png" alt="Studies for iOS" width="100pt" height="100pt"></td>
-                    <td class="onethird"><img class="ios" src="img/projects/filemanager/icon@2x.png" alt="File Manager" width="100pt" height="100pt"></td>
-                </tr>
-                <tr class="description">
-                    <td><a href="https://itunes.apple.com/us/app/id1040927771?mt=8" target="_blank">Archiver</a></td>
-                    <td><a href="http://www.studiesapp.com" target="_blank">Studies for iOS</a></td>
-                    <td><a href="https://itunes.apple.com/us/app/id805717377?mt=8" target="_blank">File Manager</a></td>
-                </tr>
-                <tr class="logo">
-                    <td class="onethird"><img class="ios" src="img/projects/avplayer/icon.png" alt="AVPlayer for iPhone" width="100pt" height="100pt"></td>
-                    <td class="onethird"><a href="mailto:i.am.rodionovd@gmail.com?subject=I%20want%20to%20hire%20you%20to%20work%20on&hellip;"><img src="img/projects/empty_slot.svg" alt="Empty slot" width="100pt" height="100pt"></a></td>
-                </tr>
-                <tr class="description">
-                    <td><a href="https://itunes.apple.com/us/app/id950389211?mt=8" target="_blank">AVPlayer</a></td>
-                    <td>Your project here</td>
-                </tr>
-            </table>
-            <!--  -->
-            <h3 id="sketchplugins">Sketch Plugins</h3>
-            <p>
-                I love Sketch. But even more than that I love writing plugins for this tool because it gives me an ability to utilize my Cocoa-fu and, at the same time, to fulfill my need for a challenge: it’s a normal situation for me to spend a few hours reverse-engineering Sketch.app in order to figure out how it works internally so I can do the impossible possible.
-            </p>
-            <p>
-                As I mentioned above, I prefer building Sketch plugins with the native toolchain: Objective–C (or Swift) and Cocoa. This empowers me to create any UI I need without struggling with CocoaScript’s poor (read, nonexistent) xib/storyboards support and general luck of important features. I also like types, so anything JavaScript-ish is not what I’m comfortable working with on any non-trivial project.
-            </p>
-            <p>
-                Here’s a few of publicly available Sketch plugins I built recently:
-            </p>
-            <table class="showcase">
-                <!-- 1 row -->
-                <tr class="logo">
-                    <td class="onethird"><img src="img/projects/sympli/sympli.svg" alt="Sympli" width="100pt" height="100pt"></td>
-                    <td class="onethird"><img src="img/projects/sketch_generic/icon@2x.png" alt="Calgen" width="100pt" height="100pt"></td>
-                    <td class="onethird"><img src="img/projects/calgen.svg" alt="Calgen" width="100pt" height="100pt"></td>
-                </tr>
-                <tr class="description">
-                    <td><a href="http://sympli.io" target="_blank">Sympli</a></td>
-                    <td><a href="http://states.design" target="_blank">States</a></td>
-                    <td><a href="https://free.lstore.graphics/plugin-sketch-7-columns-calendar-creator/" target="_blank">7 Columns Calendar Creator</a></td>
-                </tr>
-                <!-- 2 row -->
-                <tr class="logo">
-                    <td class="onethird"><img src="img/projects/sketch_generic/icon.png" alt="Calgen" width="100pt" height="100pt"></td>
-                    <td class="onethird"><a href="mailto:i.am.rodionovd@gmail.com?subject=I%20want%20to%20hire%20you%20to%20work%20on&hellip;"><img src="img/projects/empty_slot.svg" alt="Empty slot" width="100pt" height="100pt"></a></td>
-                </tr>
-                <tr class="description">
-                    <td>Symbol Navigator <sup><i>soon!</i></sup></td>
-                    <td>Your project here</td>
-                </tr>
-            </table>
-            <p>
-                By the way, States is <a href="https://github.com/edenvidal/States" target="_blank">open–source</a>. <span class="kindahidden"> I heard that some internal parts of <a href="https://animaapp.github.io" target="_blank">Auto Layout for Sketch</a> were based on its code ✨</span>
-            </p>
-            <p>
-                I learned a ton from the community so it feels great to be able to give something back by sharing my knowledge and experience with others!
-            </p>
-            <h3 id="reverseengineering">Reverse–Engineering &amp; System Internals</h3>
-            <p>
-                A few years ago I was very curious about the low-level stuff: dynamic code injection, dyld tricks, function hooking, etc. I also started to dig into implementations of libraries and third-party applications via reverse-engineering in order to figure out how they work and how I can replicate them, or (in case of system libraries) work around some unexpected behaviour.
-            </p>
-            <p>
-                Believe it or not, but the stuff I learned by doing all of that actually helps me almost every day. Especially when working on Sketch plugins where I need to know exactly which internal Sketch APIs to use and how.
-            </p>
-            <p>
-                I have a plenty of low-level libraries and research projects on my <a href="https://github.com/rodionovd" target="_blank">GitHub</a>. Among them are:
-                <ul>
-                    <li><a href="https://github.com/rodionovd/task_vaccine" target="_blank">task_vaccine</a><span class="kindahidden">, which is a lightweight code injection library for macOS</span></li>
-                    <li><a href="https://github.com/rodionovd/liblorgnette/" target="_blank">liblorgnette</a><span class="kindahidden">, which is a tool for interprocess symbol lookup that works on both iOS and macOS</span></li>
-                    <li><a href="https://github.com/rodionovd/SWRoute" target="_blank">SWRoute</a><span class="kindahidden">, which is the first (June 2014) PoC of function interception in pure Swift</span></li>
-                    <li><a href="https://github.com/rodionovd/rd_route" target="_blank">rd_route</a><span class="kindahidden">, which is a toolbox for function interception on macOS</span></li>
-                </ul>
-            </p>
-        <h2>🎓 Education</h2>
-        <p>I have a bachelor’s degree in Computer Science from Tomsk State University. My thesis was on building a prototype of Ruby virtual machine bytecode decompiler.</p>
+    </header>  
+    
+    <!--  -->
 
-        <h2>💈 Personal</h2>
-        <p>
-            I live in Saint Petersburg, Russia. I <a href="https://twitter.com/dog_rates/status/775410014383026176" target="_blank">love dogs</a>, enjoy long walks and Asian cuisines 🥘.
-        </p>
+    <h2>I’m available for hire</h2>
+    <p>
+        <div style="text-align:center" class="note">
+            Currently open for short-term contract work or full time employment.
+        </div>
+    </p>
+    <p>
+        CV<sup class="soon">(soon)</sup>, <a href="mailto:i.am.rodionovd@gmail.com">Email</a>, <a href="https://github.com/rodionovd">GitHub</a>, <a href="https://twitter.com/rodionovme">Twitter</a>, LinkedIn<sup class="soon">(soon)</sup>
+    </p>
+    <p>
+        Would love to work on macOS apps, design tool integrations (e.g. Sketch plugins), SDK/framework development, reverse-engineering, and making cross-platform apps feel at home on macOS.
+    </p>
+    <p>
+        I’m looking for a place where I can be involved in high-level product discussions and talking to users as well as writing code.
+    </p>
+    <p>
+        I have a proven track record of adapting to different communication styles and workflows across teams and companies; but I appreciate remote, async communications, and written culture the most.
+    </p>
+
+    <!--  -->
+
+    <h2>Projects</h2>
+    <table class="showcase">
+        <!-- 1 row -->
+        <tr class="logo">
+            <td class="onethird"><img src="img/projects/versions.png" alt="Sympli Versions" width="100pt" height="100pt"></td>
+            <td class="onethird"><img src="img/projects/sympli.png" alt="Sympli Handoff plugin for Sketch" width="100pt" height="100pt"></td>
+            <td class="onethird"><img src="img/projects/studies_mac.png" alt="Studies for Mac" width="100pt" height="100pt"></td>
+        </tr>
+        <tr class="description">
+            <td><a href="https://sympli.io/versions" target="_blank">Sympli Versions</a></td>
+            <td><a href="https://sympli.io/handoff" target="_blank">Sympli Handoff</a></td>
+            <td><a href="https://www.studiesapp.com" target="_blank">Studies for Mac</a></td>
+        </tr>
+        <!-- 2 row -->
+        <tr class="logo">
+            <td class="onethird"><img src="img/projects/shotty.png" alt="Shotty" width="100pt" height="100pt"></td>
+            <td class="onethird"><img src="img/projects/ensembles.png" alt="Ensembles" width="100pt" height="100pt"></td>
+            <td class="onethird"><img src="img/projects/studies_ios.png" alt="Studies for iOS" width="100pt" height="100pt"></td>
+        </tr>
+        <tr class="description">
+            <td><a href="https://meetshotty.com" target="_blank">Shotty</a></td>
+            <td><a href="https://www.ensembles.io" target="_blank">Ensembles</a></td>
+            <td><a href="https://itunes.apple.com/us/app/studies-flashcards-for-serious-students/id986066259" target="_blank">Studies for iOS</a></td>
+        </tr>
+        <!-- 3 row -->
+        <tr class="logo">
+            <td class="onethird"><img src="img/projects/imageframer.png" alt="ImageFramer" width="100pt" height="100pt"></td>
+            <td class="onethird"><img src="img/projects/memory_cleaner.png" alt="MemoryCleaner" width="100pt" height="100pt"></td>
+            <td class="onethird"><img src="img/projects/trickster.png" alt="Trickster" width="100pt" height="100pt"></td>
+        </tr>
+        <tr class="description">
+            <td><a href="https://imageframer.net" target="_blank">ImageFramer</a></td>
+            <td><a href="https://zipzapmac.com/MemoryCleaner" target="_blank">MemoryCleaner</a></td>
+            <td><a href="https://www.apparentsoft.com/trickster" target="_blank">Trickster</a></td>
+        </tr>
+        <!-- 4 row -->
+        <tr class="logo">
+            <td class="onethird"><img src="img/projects/cuckoo_sandbox.png" alt="Cuckoo Sandbox" width="100pt" height="100pt"></td>
+            <td class="onethird"><img src="img/projects/cirkus.png" alt="Cirkus for Mac" width="100pt" height="100pt"></td>
+            <td class="onethird"><img src="img/projects/archiver.png" alt="Archiver for iPhone" width="100pt" height="100pt" style="border-radius: 20%;"></td>
+        </tr>
+        <tr class="description">
+            <td><a href="https://cuckoosandbox.org/" target="_blank">Cuckoo Sandbox</a></td>
+            <td><a href="https://cirkus.com" target="_blank">Cirkus for Mac</a></td>
+            <td><a href="https://apps.apple.com/ru/app/id1040927771" target="_blank">Archiver for iPhone</a></td>
+        </tr>
+    </table>
+
+    <!--  -->
+
+    <h2>Education</h2>
+    <p>
+        I graduated from <a href="https://en.tsu.ru"><abbr title="Tomsk State University, Russia">TSU</abbr></a> with a bachelor’s degree in Computer Science. My thesis was on building a decompiler for Ruby virtual machine (YARV) bytecode.
+    </p>
+
+    <!--  -->
+
+    <h2>Reverse–Engineering</h2>
+    <p>
+        I have a background in reverse-engineering applications, system tools and malware. This experience still guides me today: whether it to figure out how third-party apps are built or how to work around some unexpected behaviour and bugs in system frameworks.
+    </p>
+    <p>
+        Here’s a few of my low-level libraries and research projects from that period:
+        <ul>
+            <li><a href="https://github.com/rodionovd/task_vaccine" target="_blank">task_vaccine</a><span class="kindahidden"> – code injection for macOS</span></li>
+            <li><a href="https://github.com/rodionovd/liblorgnette/" target="_blank">liblorgnette</a><span class="kindahidden"> – interprocess symbol lookup that works on both iOS and macOS</span></li>
+            <li><a href="https://github.com/rodionovd/SWRoute" target="_blank">SWRoute</a><span class="kindahidden"> – the first PoC of function interception for pure Swift code in the wild</span></li>
+            <li><a href="https://github.com/rodionovd/rd_route" target="_blank">rd_route</a><span class="kindahidden"> – a (yet another, yes) library for function hooking on macOS</span></li>
+            <li><a href="https://github.com/rodionovd/NeverGonnaGiveYouUp" target="_blank">NeverGonnaGiveYouUp</a> – a PoC of a kext that prevents an agent process from being killed from userland
+
+            </li>
+        </ul>
+    </p>
     <footer class="footer">
         <p>
-            <a href="http://internals.exposed">🔬</a> — Internals Exposed
+            – November 2022
         </p>
     </footer>
-    </div>
-    <script type="text/javascript" src="js/retina.min.js"></script>
 </body>
 </html>
