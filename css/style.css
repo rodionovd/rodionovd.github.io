@@ -7,12 +7,15 @@ body {
     color: #333333;
     background: white;
     font-family: system-ui, -apple-system, sans-serif;
-    margin: 0;
-    padding: 0;
     line-height: 1.5;
     max-width: 50rem;
     padding: 2em;
     margin: auto;
+}
+
+p {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .flipped {
@@ -23,18 +26,16 @@ body {
     transform:         scaleX(-1);
 }
 
-.container header h1 {
+h1 {
     font-size: 1.8rem;
 }
 
-.container h2 {
+h2 {
     font-size: 1.3rem;
-    padding-top: 1.5rem;
 }
 
-.container h3 {
+h3 {
     font-size: 1.1rem;
-    padding-top: 1rem;
 }
 
 .note {
@@ -57,40 +58,28 @@ body {
     border-radius: 50%;
 }
 
-/* Links */
-
-.container a {
-    text-decoration: none;
-    border-bottom: 1px dotted black;
-}
-.container a:hover {
-    border-bottom: 1px solid black;
-}
-
 /* Projects */
 
 .showcase {
     width: 100%;
-    border-collapse: collapse;
 }
 
-.showcase .logo td {
-    padding-top: 1.5em;
+.showcase td {
     text-align: center;
+    font-size: small;
+}
+
+.showcase .logo img:hover {
+    opacity: 80%;
 }
 
 .showcase .description td {
-    padding-bottom: 1.5em;
-    text-align: center;
+    padding-bottom: 2em;
 }
 
 /* Footer */
 
-footer.footer {
+footer {
     font-size: 0.8rem;
     padding-top: 1rem;
-}
-
-footer.footer a  {
-    border-bottom: none;
 }
