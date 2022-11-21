@@ -10,7 +10,6 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="photo">
             <span style="margin-right: -10pt;">👋</span><img src="img/me.jpeg" alt="A photo of myself" width="115"><span class="flipped" style="margin-left: -10pt;">👋</span>
@@ -34,13 +33,13 @@
         </div>
     </p>
     <p>
-        CV<sup class="soon">(soon)</sup>, <a href="mailto:i.am.rodionovd@gmail.com">Email</a>, <a href="https://github.com/rodionovd">GitHub</a>, <a href="https://twitter.com/rodionovme">Twitter</a>, LinkedIn<sup class="soon">(soon)</sup>
+        <a href="mailto:i.am.rodionovd@gmail.com">Email</a>, <a href="https://github.com/rodionovd">GitHub</a>, <a href="https://twitter.com/rodionovme">Twitter</a>, <a href="https://t.me/rodionovme">Telegram</a>
     </p>
     <p>
-        Would love to work on macOS apps, design tool integrations (e.g. Sketch plugins), SDK/framework development, reverse-engineering, and making cross-platform apps feel at home on macOS.
+        Would love to work on macOS apps, design tool integrations (e.g. Sketch plugins), SDK development, reverse-engineering, and making cross-platform apps feel at home on macOS.
     </p>
     <p>
-        I’m looking for a place where I can be involved in high-level product discussions and talking to users as well as writing code. I admire companies that innovate in UI design tools and collaboration software in general.
+        I’m looking for a place where I can be involved in high-level product discussions and talking to users as well as writing code. I admire companies that innovate in UI design field and collaboration software in general.
     </p>
     <p>
         I have a proven track record of adapting to different communication styles and workflows across teams and companies; but I thrive in remote environments with async communications and written culture the most.
@@ -48,12 +47,12 @@
 
     <!--  -->
 
-    <h2>Projects</h2>
+    <h2>Experience</h2>
     <table class="showcase">
         <!-- 1 row -->
         <tr class="logo">
             <td><a href="https://sympli.io/versions" target="_blank"><img src="img/projects/versions.png" title="Sympli Versions Mac App" width="80pt" height="80pt"></a></td>
-            <td><a href="https://sympli.io/handoff" target="_blank"><img src="img/projects/sympli.png" title="Sympli Handoff plugin for Sketch" width="80pt" height="80pt"></a></td>
+            <td><a href="https://sympli.io/handoff" target="_blank"> <img src="img/projects/sympli.png" title="Sympli Handoff plugin for Sketch" width="80pt" height="80pt"></a></td>
             <td><a href="https://www.studiesapp.com" target="_blank"><img src="img/projects/studies_mac.png" title="Studies for Mac" width="80pt" height="80pt"></a></td>
         </tr>
         <tr class="description">
@@ -96,31 +95,90 @@
         </tr>
     </table>
 
+    <p>
+        <h4 class="role">Product Owner, Lead macOS Engineer</h4>
+        <p class="employment-info"><a href="https://sympli.io">Sympli</a>, 2017–now</p>
+        <p>
+            As a product owner of <a href="https://sympli.io/versions" target="_blank">Sympli Versions</a> and macOS engineering lead on a small team, I’m wearing many different hats big and small at the same time:
+            <ul class="loosenup">
+                <li>While working on a product vision, I take an active part in establilshing core features for the future versions of the product as a set of high-level proposals; then driving those proposals across the company, iterating on the feedback and adjusting ideas to busines needs; then building an actionable roadmap out of all the decisions made on previous steps.</li>
+                <li>Acting as an engineering manager, it’s my responsibility to convey technical requirements for backend, desktop and QA teams; coordinate their workload and adjust the scope of work to meet deadlines. At times, this managerial hat would also bring me to hiring, interviewing and onboarding new teammates.</li>
+                <li>As a customer support specialist, I’m often the first responder for regular and priority support requests. There’s also communicating product and technical aspects of Sympli Versions and Handoff to users via marketing materials and support channels; troubleshooting and figuring out workarounds with affected clients directly.</li>
+                <li>Finally, as a lead engineer on the desktop team, my focus is on building a robust native macOS app that has to orchestrate user documents, git-level storage and transport layers, semantic Sketch document versioning and diffing, pull request management, and UI-driven merge conflict resolution of cross-dependent entites in a constantly evolving Sketch document format.</li>
+            </ul>
+        </p>
+        <p>
+            I’m also a Sketch integration lead of <a href="https://sympli.io/handoff" target="_blank">Sympli Handoff</a> where most of my effort goes into a non-trivial Objective‑C <a href="https://github.com/sympli/sympli-sketch-plugin" target="_blank">Sketch plugin</a> that manipulates internal Sketch data model directly bypassing limited official APIs and sports a standalone UI flow. To mitigate the unstable nature of a native Sketch plugin, I’m maintaining an extensive automated test suite that validates private API contracts and specific document layout cases against multiple versions of Sketch.app (including the latest available beta version) simultaneously during a CI pass.
+        </p>
+    </p>
+    <p>
+        <h4 class="role">macOS Engineer</h4>
+        <p class="employment-info"><a href="https://www.apparentsoft.com">Apparent Software Inc.</a>, 2017, contractor</p>
+        <p>
+            I was in charge of Batch Processing feature in <a href="https://imageframer.net/articles/whats-new-in-imageframer-4-0/" target="_blank">ImageFramer</a>: analyzed an existing single-threaded image processing engine and adapated it to work in a multi-threaded environment required for parallel application of image templates; built a UI flow for the highly-configurable batch export process.
+        </p>
+        <p>
+            Also made a few smaller contributions to <a href="https://blog.apparentsoft.com/trickster/1378/trickster-brings-a-light-theme/" target="_blank">Trickster</a>: introduced a light theme (and theming support in general); updated the way file previews work there; made Watched Folders feature more reliable when macOS Sandbox is involved.
+        </p>
+    </p>
+    <p>
+        <h4 class="role">macOS/iOS Engineer</h4>
+        <p class="employment-info"><a href="http://www.mentalfaculty.com">The Mental Faculty B.V.</a>, 2016, contractor</p>
+        <p>
+            Worked on data import modules for a flashcard app <a href="https://www.studiesapp.com" target="_blank">Studies</a>: built components for importing card sets from Quizlet.com and Excel spreadsheets, accompanied by documentation and sample code.
+        </p>
+        <p>
+            Contributed to a data sync framework <a href="http://www.ensembles.io" target="_blank">Ensembles</a> by updating a Dropbox-based cloud file system to work with Dropbox SDK v2; discovered and reported a few issues in the SDK itself.
+        </p>
+    </p>
+    <p>
+        <h4 class="role">Google Summer of Code Contributor</h4>
+        <p class="employment-info"><a href="https://www.honeynet.org/2015/11/10/cuckoo-sandbox-meets-mac-os-x/" target="_blank">Cuckoo Sandbox</a>, Summer 2015</p>
+        <p>
+            Participated in Google Summer of Code during one of the summer breaks while pursuing a CS degree, adding support for analyzing macOS binaries in <a href="https://www.honeynet.org/2015/11/10/cuckoo-sandbox-meets-mac-os-x/" target="_blank">an automated malware analysis system</a>.
+        </p>
+        <p>
+            The project involved automating virtualized macOS environments, (ab)using <a href="https://github.com/cuckoosandbox/cuckoo/tree/master/cuckoo/data/analyzer/darwin/lib/dtrace" target="_blank">DTrace</a> for dynamic analysis of potentially malicious executables, and writing end-to-end Python tests covering communications between a host OS and a virtual machine.
+        </p>
+    </p>
+    <p>
+        <h4 class="role">Freelance Software Engineer for Apple Platforms</h4>
+        <p class="employment-info"><abbr title="via UpWork and personal network">Various clients</abbr>, 2011-2017, part-time</p>
+        <p>
+            Full-cycle software development: discussing business requirements with a client, building a prototype, iterating on a solution, collecting feedback, and publishing final products for distribution.
+        </p>
+        <p>
+            Worked on a multitude of tasks: from debugging legacy codebases and writing Swift wrappers for C libraries to architecture review sessions, building Sketch plugins and rich Cocoa applications.
+        </p>
+    </p>
+    <p>
+        <h4 class="role">Open Source Contributor</h4>
+        <p class="employment-info">2014-now</p>
+        <p>
+            Being involved in open source since 2014, I’ve contributions in multiple projects, inlcuding:
+            <ul>
+                <li><a href="https://github.com/sketch-hq/SketchAPI" target="_blank">sketch-hq/SketchAPI</a> – a first-party <a href="https://www.sketch.com" target="_blank">Sketch</a> JavaScript API</li>
+                <li><a href="https://github.com/mas-cli/mas" target="_blank">mas-cli/mas</a> – a command line interface for Mac App Store</li>
+                <li><a href="https://github.com/edenvidal/states" target="_blank">edenvidal/states</a> – an innovative Sketch plugin for managing artboard states</li>
+                <li><a href="https://github.com/cuckoosandbox/cuckoo" target="_blank">cuckoosandbox/cuckoo</a> – an automated malware analysis system</li>
+            </ul>
+        </p>
+        <p>
+            I also have a deep background in reverse-engineering and this experience still guides me today: whether it to figure out how third-party apps are built or how to work around some unexpected behaviour and bugs in system frameworks. Here’s a few of research projects from that period:
+            <ul>
+                <li><a href="https://github.com/rodionovd/task_vaccine" target="_blank">task_vaccine</a><span class="kindahidden"> – code injection for macOS</span></li>
+                <li><a href="https://github.com/rodionovd/liblorgnette/" target="_blank">liblorgnette</a><span class="kindahidden"> – interprocess symbol lookup that works on both iOS and macOS</span></li>
+                <li><a href="https://github.com/rodionovd/SWRoute" target="_blank">SWRoute</a><span class="kindahidden"> – the first PoC of function interception for pure Swift code in the wild</span></li>
+                <li><a href="https://github.com/rodionovd/rd_route" target="_blank">rd_route</a><span class="kindahidden"> – a (yet another, yes) library for function hooking on macOS</span></li>
+            </ul>
+        </p>
+    </p>
+
     <!--  -->
 
     <h2>Education</h2>
     <p>
-        Bachelor’s Degree in Computer Science from <a href="https://en.tsu.ru" target="_blank"><abbr title="Tomsk State University, Russia">TSU</abbr></a>. My graduation project was a decompiler for Ruby virtual machine (YARV) bytecode as part of a PoC of bypassing <a href="https://www.rubyencoder.com" target="_blank">RubyEncoder</a>’s code obfuscation methods.
-        <p>I also participated in Google Summer of Code during one of the summer breaks, adding support for analyzing macOS binaries in <a href="https://www.honeynet.org/2015/11/10/cuckoo-sandbox-meets-mac-os-x/" target="_blank">Cuckoo Sandbox</a>: that involved automating virtualized macOS environments, (ab)using <a href="https://github.com/cuckoosandbox/cuckoo/tree/master/cuckoo/data/analyzer/darwin/lib/dtrace" target="_blank">DTrace</a> for dynamic analysis of potentially malicious executables, and writing end-to-end Python tests covering communications between a host OS and a virtual machine.</p>
-    </p>
-
-    <!--  -->
-
-    <h2>Reverse–Engineering</h2>
-    <p>
-        I have a background in reverse-engineering applications, system tools and malware. This experience still guides me today: whether it to figure out how third-party apps are built or how to work around some unexpected behaviour and bugs in system frameworks.
-    </p>
-    <p>
-        Here’s a few of my low-level libraries and research projects from that period:
-        <ul>
-            <li><a href="https://github.com/rodionovd/task_vaccine" target="_blank">task_vaccine</a><span class="kindahidden"> – code injection for macOS</span></li>
-            <li><a href="https://github.com/rodionovd/liblorgnette/" target="_blank">liblorgnette</a><span class="kindahidden"> – interprocess symbol lookup that works on both iOS and macOS</span></li>
-            <li><a href="https://github.com/rodionovd/SWRoute" target="_blank">SWRoute</a><span class="kindahidden"> – the first PoC of function interception for pure Swift code in the wild</span></li>
-            <li><a href="https://github.com/rodionovd/rd_route" target="_blank">rd_route</a><span class="kindahidden"> – a (yet another, yes) library for function hooking on macOS</span></li>
-            <li><a href="https://github.com/rodionovd/NeverGonnaGiveYouUp" target="_blank">NeverGonnaGiveYouUp</a> – a PoC of a kext that prevents an agent process from being killed from userland
-
-            </li>
-        </ul>
+        Bachelor’s Degree in Computer Science from <a href="https://en.tsu.ru" target="_blank"><abbr title="Tomsk State University, Russia">TSU</abbr></a>’17. My graduation project was a decompiler for Ruby virtual machine (YARV) bytecode as part of a PoC of bypassing <a href="https://www.rubyencoder.com" target="_blank">RubyEncoder</a>’s code obfuscation methods.
     </p>
     <footer>
         <p>

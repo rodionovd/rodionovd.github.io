@@ -18,6 +18,14 @@ p {
     margin-bottom: 0.75rem;
 }
 
+ul {
+    margin-top: -4pt;
+}
+
+.loosenup li {
+    margin-bottom: 4pt;
+}
+
 .flipped {
     display: inline-block;
     -moz-transform:    scaleX(-1);
@@ -32,6 +40,7 @@ h1 {
 
 h2 {
     font-size: 1.3rem;
+    margin-top: 1.5rem;
 }
 
 h3 {
@@ -75,6 +84,16 @@ h3 {
 
 .showcase .description td {
     padding-bottom: 2em;
+}
+
+/* Experience */
+
+h4.role {
+    margin-bottom: -8pt;
+}
+
+.employment-info {
+    font-size: 90%;
 }
 
 /* Footer */
