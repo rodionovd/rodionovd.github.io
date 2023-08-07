@@ -67,6 +67,18 @@ h3 {
     border-radius: 50%;
 }
 
+@media print {    
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+
+@media screen {
+    .only-print {
+        display: none !important;
+    }
+ }
+
 /* Projects */
 
 .showcase {
@@ -88,9 +100,12 @@ h3 {
 
 /* Experience */
 
-h4.role {
-    margin-top: 2em;
+h4.role  {
     margin-bottom: -8pt;
+}
+
+.experience-item {
+    margin-bottom: 1.5em;
 }
 
 .employment-info {
