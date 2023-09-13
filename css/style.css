@@ -71,6 +71,10 @@ h3 {
     .no-print, .no-print * {
         display: none !important;
     }
+    
+    ul {
+        padding-left: 1.1rem;
+    }
 }
 
 @media screen {
