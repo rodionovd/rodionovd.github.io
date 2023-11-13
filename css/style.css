@@ -81,6 +81,10 @@ h3 {
     ul {
         padding-left: 1.1rem;
     }
+
+    :root, html {
+        font-size: 90%;
+    }
 }
 
 @media screen {
