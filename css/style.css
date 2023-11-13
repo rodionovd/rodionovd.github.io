@@ -13,6 +13,12 @@ body {
     margin: auto;
 }
 
+abbr {
+    text-decoration: underline dashed;
+    -webkit-text-decoration: underline dashed;
+    cursor: help;
+}
+
 p {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
