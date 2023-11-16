@@ -14,8 +14,6 @@ body {
 }
 
 abbr {
-    text-decoration: underline dashed;
-    -webkit-text-decoration: underline dashed;
     cursor: help;
 }
 
@@ -59,8 +57,10 @@ h3 {
     padding: 8pt;
 }
 
-.soon {
-    font-size: x-small;
+.subtle-bubble {
+    background-color: rgb(242, 245, 245);
+    border-radius: 3pt;
+    padding: 2pt;
 }
 
 /* Header */
