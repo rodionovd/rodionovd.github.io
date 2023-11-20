@@ -15,6 +15,9 @@ body {
 
 abbr {
     cursor: help;
+    text-decoration: rgb(112, 172, 128) wavy underline;
+    -webkit-text-decoration: rgb(112, 172, 128) wavy underline;
+    text-underline-offset: 1.5pt;
 }
 
 p {
@@ -84,6 +87,11 @@ h3 {
 
     :root, html {
         font-size: 90%;
+    }
+    
+    abbr {
+        text-decoration: none;
+        -webkit-text-decoration: none;
     }
 }
 
