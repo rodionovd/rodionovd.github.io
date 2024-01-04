@@ -20,6 +20,13 @@ abbr {
     text-underline-offset: 1.5pt;
 }
 
+@media (hover: none) { 
+    abbr {
+        text-decoration: none;
+        -webkit-text-decoration: none;
+    }
+}
+
 p {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
@@ -99,7 +106,7 @@ h3 {
     .only-print {
         display: none !important;
     }
- }
+}
 
 /* Projects */
 
