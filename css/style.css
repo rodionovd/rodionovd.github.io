@@ -1,13 +1,13 @@
 :root,
 html {
-    font-size: default;
+    font-size: 13pt;
 }
 
 body {
     color: #333333;
     background: white;
     font-family: system-ui, -apple-system, sans-serif;
-    line-height: 1.5;
+    line-height: 1.6;
     max-width: 50rem;
     padding: 2em;
     margin: auto;
