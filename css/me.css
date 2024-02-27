@@ -1,0 +1,65 @@
+@import url("/css/base.css");
+
+/* Header */
+
+.flipped {
+    display: inline-block;
+    -moz-transform:    scaleX(-1);
+    -o-transform:      scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform:         scaleX(-1);
+}
+
+.photo {
+    text-align: center;
+}
+
+.photo img {
+    border-radius: 50%;
+}
+
+.available-for-hire-note {
+    background-color: cornsilk;
+    border-radius: 4pt;
+    padding: 8pt;
+}
+
+/* Projects */
+
+.showcase {
+    width: 100%;
+}
+
+.showcase td {
+    text-align: center;
+    font-size: small;
+}
+
+.showcase .logo img:hover {
+    opacity: 80%;
+}
+
+.showcase .description td {
+    padding-bottom: 2em;
+}
+
+/* Experience */
+
+h4.role  {
+    margin-bottom: -8pt;
+}
+
+.experience-item {
+    margin-bottom: 1.5em;
+}
+
+.employment-info {
+    font-size: 90%;
+}
+
+/* Footer */
+
+footer {
+    font-size: 0.8rem;
+    padding-top: 1rem;
+}
