@@ -79,3 +79,8 @@ h3 {
         display: none !important;
     }
 }
+
+footer {
+    font-size: 0.8rem;
+    padding-top: 1rem;
+}
