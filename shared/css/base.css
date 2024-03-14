@@ -71,7 +71,7 @@ h3 {
     }
 
     :root, html {
-        font-size: var(--print-font-size));
+        font-size: var(--print-font-size);
     }
 
     body {
