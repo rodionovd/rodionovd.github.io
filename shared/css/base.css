@@ -1,0 +1,126 @@
+:root {
+    --accent-color: rgb(112, 172, 128);
+    --primary-background-color: rgb(255, 255, 252);
+    --secondary-background-color: rgb(242, 245, 245);
+
+    --primary-font-size: 14pt;
+    --primary-font-family: system-ui, -apple-system, sans-serif;
+    
+    --print-font-size: 10pt;
+}
+
+html {
+    font-size: var(--primary-font-size);
+}
+
+body {
+    color: #333333;
+    background: var(--primary-background-color);
+    font-family: var(--primary-font-family);
+    line-height: 1.6;
+    max-width: 40rem;
+    padding: 2em;
+    margin: auto;
+}
+
+abbr {
+    cursor: help;
+    text-decoration: var(--accent-color) wavy underline;
+    -webkit-text-decoration: var(--accent-color) wavy underline;
+    text-underline-offset: 1.8pt;
+}
+
+p {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+.subtle-bubble {
+    background-color: var(--secondary-background-color);
+    border-radius: 3pt;
+    padding: 2pt 3pt 2pt 3pt;
+}
+
+@media (hover: none) { 
+    abbr {
+        text-decoration: none;
+        -webkit-text-decoration: none;
+    }
+}
+
+@media print {    
+    .no-print, .no-print * {
+        display: none !important;
+    }
+    
+    ul {
+        padding-left: 1.1rem;
+    }
+
+    :root, html {
+        font-size: var(--print-font-size));
+    }
+
+    body {
+        max-width: 100%;
+    }
+    
+    abbr {
+        text-decoration: none;
+        -webkit-text-decoration: none;
+    }
+}
+
+@media screen {
+    .only-print {
+        display: none !important;
+    }
+}
+
+.flipped {
+    display: inline-block;
+    -moz-transform:    scaleX(-1);
+    -o-transform:      scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform:         scaleX(-1);
+}
+
+.new-content-badge {
+    color: ivory;
+    font-size: 60%;
+    font-weight: 500;
+    background-color: var(--accent-color);
+    border-radius: 3pt;
+    padding: 2pt;
+    vertical-align: super;
+}
+
+header .photo {
+    text-align: center;
+}
+
+header .photo img {
+    border-radius: 50%;
+}
+
+header .navigation {
+    text-align: right;
+}
+
+footer {
+    font-size: 70%;
+    padding-top: 1rem;
+}
