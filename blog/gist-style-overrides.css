@@ -1,0 +1,99 @@
+/* 
+    Here we override default GitHub Gist styles to our preference.
+ */
+
+:root {
+    --callout-background-color: rgb(246, 248, 250);
+    --nested-callout-background-color: rgb(232, 233, 233);
+}
+
+/* Remove borders, extra padding and margins */
+.gist .gist-file {
+    border: 0;
+}
+
+.gist .gist-data {
+    border-bottom: 0;
+    background-color: inherit;
+}
+
+.gist .markdown-body {
+    h1 {
+        font-size: 1.8rem;
+        margin-top: 1.5rem;
+        border-bottom: 0;
+    }
+
+    h2 {
+        margin-top: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        margin-top: 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+.gist .gist-file article {
+    padding: 0;
+}
+
+.gist .markdown-body blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    
+    padding: 16px;
+
+    border-color: var(--accent-color);
+    border-radius: 6px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    color: var(--primary-text-color);
+    background-color: var(--callout-background-color);
+
+    code {
+        background-color: var(--nested-callout-background-color);
+    }
+}
+
+/* Hide anchor links for header elements */
+
+.gist .gist-file article .anchor-element {
+    display: none;
+}
+
+/* Fix fonts */
+
+.gist .markdown-body {
+    font-family: var(--primary-font-family);
+    font-size: var(--primary-font-size);
+    line-height: var(--primary-line-height);
+}
+
+.gist .highlight,
+.gist .markdown-body pre code {
+    font-size: 85%;
+    tab-size: 4;
+}
+
+/* Custom colors */
+
+.gist .markdown-body .highlight pre {
+    background: var(--callout-background-color);
+}
+
+.gist .markdown-body code {
+    background: var(--callout-background-color);
+}
+
+/* Hide extra UI elements */
+
+.gist .gist-meta {
+    display: none;
+}
+
+.gist .markdown-body .footnotes #footnote-label {
+    display: none;
+}

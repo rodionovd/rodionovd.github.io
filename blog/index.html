@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Dmitry Rodionov">
+    <title>Dmitry Rodionov’s Blog</title>
+    <link href="/blog/blog.css" rel="stylesheet">
+    <script src="/shared/scripts/render-header.js"></script>
+</head>
+
+<body>
+    <header>
+        <script>renderHeader({ emoji: "🥼" });</script>
+        <div>
+            <h1>Dmitry Rodionov’s Blog</h1>
+            <p>
+                Niche programming content and uninspiring philosophical tirades on software development.
+            </p>
+        </div>
+    </header>
+
+    <section class="posts">
+        <h3>2024</h3>
+        <ol>
+            <li class="post"><a href="/blog/posts/04-embed-segues-appkit.html">Working with Embed Segues in Storyboards</a> <span class="tag" id="appkit">AppKit</span></li>
+            <li class="post"><a href="/blog/posts/02-cpp-makefile-spm.html">Running a C++ project on Swift Package Manager</a> <span class="tag" id="cpp">C++</span><span class="tag" id="swift">Swift</span><span class="tag" id="philosophy">Philosophy</span></li>
+            <li class="post"><a href="/blog/posts/01-hello-world.html">I have a blog (again)</a> <span class="tag" id="meta">Meta</span></li>
+        </ol>
+    </section>
+    <section class="posts">
+        <h3>2016</h3>
+        <ol>
+            <li class="post"><a href="/blog/posts/03-dtrace-follow-children.html">Writing a DTrace script that follows children of a target process</a> <span class="tag" id="dtrace">DTrace</span><span class="tag" id="macos">macOS</span></li>
+        </ol>
+    </section>
+
+    <footer>
+    <!-- TODO: <dmitry.rodionov> Link RSS Feed -->
+    <!--
+        <a type="application/rss+xml" href="/blog/feed.xml">RSS</a>
+    -->
+    </footer>
+
+    <script>        
+        // Coloring the tags
+        const tags = document.querySelectorAll(".post .tag");
+        tags.forEach(tag => {
+            tag.style.backgroundColor = `var(--tag-${tag.id}-color, var(--tag-default-color))`;
+        });
+
+        // Reverse ordering for all posts across all years
+        const posts = [... document.querySelectorAll("li.post")];
+        posts.reverse().forEach((post, idx) => {
+            post.value = idx + 1;
+        })
+    </script>
+</body>
+
+</html>

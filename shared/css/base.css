@@ -1,10 +1,12 @@
 :root {
-    --accent-color: rgb(112, 172, 128);
+    --primary-text-color: rgb(51, 51, 51);
+    --accent-color: rgba(112, 172, 128, 0.6);
     --primary-background-color: white;
     --secondary-background-color: rgb(242, 245, 245);
 
     --primary-font-size: 14pt;
     --primary-font-family: system-ui, -apple-system, sans-serif;
+    --primary-line-height: 1.6;
     
     --print-font-size: 10pt;
 }
@@ -14,10 +16,11 @@ html {
 }
 
 body {
-    color: #333333;
+    color: var(--primary-text-color);
     background: var(--primary-background-color);
     font-family: var(--primary-font-family);
-    line-height: 1.6;
+    line-height: var(--primary-line-height);
+    
     max-width: 40rem;
     padding: 2em;
     margin: auto;

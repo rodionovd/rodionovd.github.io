@@ -1,0 +1,28 @@
+@import url("/shared/css/base.css");
+
+:root {
+    --tag-appkit-color: rgb(234, 248, 248);
+    --tag-swift-color:  rgb(248, 241, 234);
+    --tag-dtrace-color: rgb(242, 248, 235);
+    --tag-default-color: var(--secondary-background-color);
+}
+
+/* Posts */
+
+.posts ol {
+    list-style-type: georgian;
+}
+
+.post .tag {
+    font-size: 70%;
+    vertical-align: middle;
+    border-radius: 3pt;
+    padding: 2pt 3pt 2pt 3pt;
+    margin-left: 4pt;
+}
+
+/* Footer */
+
+footer .navigation {
+    text-align: right;
+}
