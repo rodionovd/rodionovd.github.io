@@ -9,7 +9,7 @@
         <link>https://internals.exposed/blog/posts/04-embed-segues-appkit.html</link>
         <guid>https://internals.exposed/blog/posts/04-embed-segues-appkit.html</guid>
         <pubDate>Wed, 19 Jun 2024 09:41:00 PDT</pubDate>
-        <description>A few words on Embed Segues internals and working with child view controllers wired up via a storyboard.</description>
+        <description>Let's learn how Embed Segues actually work internally and how we're supposed to deal with child view controllers wired up via a segue.</description>
     </item>
     <item>
         <title>Writing a DTrace script that follows children of a target process</title>
