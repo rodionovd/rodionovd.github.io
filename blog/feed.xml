@@ -1,0 +1,36 @@
+<rss version="2.0">
+<channel>
+    <title>Internals Exposed</title>
+    <link>https://internals.exposed/blog/</link>
+    <description>Dmitry Rodionov’s Blog</description>
+    <language>en</language>
+    <item>
+        <title>Working with Embed Segues in Storyboards</title>
+        <link>https://internals.exposed/blog/posts/04-embed-segues-appkit.html</link>
+        <guid>https://internals.exposed/blog/posts/04-embed-segues-appkit.html</guid>
+        <pubDate>Wed, 19 Jun 2024 09:41:00 PDT</pubDate>
+        <description>A few words on Embed Segues internals and working with child view controllers wired up via a storyboard.</description>
+    </item>
+    <item>
+        <title>Writing a DTrace script that follows children of a target process</title>
+        <link>https://internals.exposed/blog/posts/03-dtrace-follow-children.html</link>
+        <guid>https://internals.exposed/blog/posts/03-dtrace-follow-children.html</guid>
+        <pubDate>Mon, 10 Jun 2024 09:41:00 PDT</pubDate>
+        <description>Talking about various approaches to making DTrace probes match both the main target process and all of its descendants, including those that outlive their ancestor.</description>
+    </item>
+    <item>
+        <title>Running a C++ project on Swift Package Manager</title>
+        <link>https://internals.exposed/blog/posts/02-cpp-makefile-spm.html</link>
+        <guid>https://internals.exposed/blog/posts/02-cpp-makefile-spm.html</guid>
+        <pubDate>Fri, 24 May 2024 09:41:00 PDT</pubDate>
+        <description>Migrating a legacy cross-platform C++ project from a dreadful Makefile to Swift Package Manager and its declarative schema.</description>
+    </item>
+    <item>
+        <title>I have a blog (again)</title>
+        <link>https://internals.exposed/blog/posts/01-hello-world.html</link>
+        <guid>https://internals.exposed/blog/posts/01-hello-world.html</guid>
+        <pubDate>Wed, 22 May 2024 09:41:00 PDT</pubDate>
+        <description>Welcome to my new blog, powered by... GitHub Gists?</description>
+    </item>
+</channel>
+</rss>
