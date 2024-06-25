@@ -5,6 +5,9 @@
 :root {
     --callout-background-color: rgb(246, 248, 250);
     --nested-callout-background-color: rgb(232, 233, 233);
+
+    --base-size-16: 0.75rem;
+    --base-size-24: 1rem;
 }
 
 /* Remove borders, extra padding and margins */
