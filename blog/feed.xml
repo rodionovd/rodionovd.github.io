@@ -8,7 +8,7 @@
         <title>Fixing unnamed C struct bridging in CocoaScript</title>
         <link>https://internals.exposed/blog/posts/05-cocoascript-struct-bridging.html</link>
         <guid>https://internals.exposed/blog/posts/05-cocoascript-struct-bridging.html</guid>
-        <pubDate>Wed, 2 Jul 2024 09:41:00 PDT</pubDate>
+        <pubDate>Wed, 3 Jul 2024 00:41:00 PDT</pubDate>
         <description>Let's uncover a subtle issue with Objective-C bridging in CocoaScript (a scripting engine powering Sketch plugins) and discuss a history of scripting environments on macOS since 10.5.</description>
     </item>
     <item>
