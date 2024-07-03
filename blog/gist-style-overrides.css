@@ -6,6 +6,13 @@
     --callout-background-color: rgb(246, 248, 250);
     --nested-callout-background-color: rgb(232, 233, 233);
 
+    /*
+        FIXME: <dmitry.rodionov>
+        The default Gist stylesheets are based on these variables and yet
+        they may not be available for some reason? Anyway, here they are.
+    */
+    --base-size-4: 4px;
+    --base-size-8: 8px;
     --base-size-16: 0.75rem;
     --base-size-24: 1rem;
 }
@@ -59,6 +66,10 @@
     & code {
         background-color: var(--nested-callout-background-color);
     }
+}
+
+.gist .markdown-body .footnotes {
+    margin: var(--base-size-16);
 }
 
 /* Hide anchor links for header elements */
