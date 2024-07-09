@@ -15,26 +15,26 @@
 
 .showcase {
     width: 100%;
-}
 
-.showcase td {
-    text-align: center;
-    font-size: small;
-}
-
-@media (max-width: 480px) {
-    .showcase .logo img {
-        width: 50pt;
-        height: 50pt;
+    & td {
+        text-align: center;
+        font-size: small;
     }
-}
 
-.showcase .logo img:hover {
-    opacity: 50%;
-}
-
-.showcase .description td {
-    padding-bottom: 2em;
+    @media (max-width: 480px) {
+        .logo img {
+            width: 50pt;
+            height: 50pt;
+        }
+    }
+    
+    .logo img:hover {
+        opacity: 50%;
+    }
+    
+    .description td {
+        /* padding-bottom: 2em; */
+    }
 }
 
 /* Experience */
@@ -45,10 +45,10 @@ h4.role  {
 
 .experience-item {
     margin-bottom: 1.5em;
-}
 
-.experience-item ul {
-    margin-top: -4pt;
+    & ul {
+        margin-top: -4pt;
+    }
 }
 
 .employment-info {

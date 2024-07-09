@@ -111,16 +111,16 @@ h3 {
     vertical-align: super;
 }
 
-header .photo {
-    text-align: center;
-}
-
-header .photo img {
-    border-radius: 50%;
-}
-
-header .navigation {
-    text-align: right;
+header {
+    .photo {
+        text-align: center;
+        & img {
+            border-radius: 50%;
+        }
+    }
+    .navigation {
+        text-align: right;
+    }
 }
 
 footer {

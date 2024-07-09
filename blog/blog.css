@@ -10,20 +10,24 @@
 
 /* Posts */
 
-.posts ol {
-    list-style-type: georgian;
-}
+.posts {
+    & ol {
+        list-style-type: georgian;
+    }
 
-.post .tag {
-    font-size: 70%;
-    vertical-align: middle;
-    border-radius: 3pt;
-    padding: 2pt 3pt 2pt 3pt;
-    margin-left: 4pt;
+    .tag {
+        font-size: 70%;
+        vertical-align: middle;
+        border-radius: 3pt;
+        padding: 2pt 3pt 2pt 3pt;
+        margin-left: 4pt;
+    }
 }
 
 /* Footer */
 
-footer .navigation {
-    text-align: right;
+footer {
+    .navigation {
+        text-align: right;
+    }
 }
