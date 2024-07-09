@@ -28,18 +28,18 @@
 }
 
 .gist .markdown-body {
-    h1 {
+    & h1 {
         font-size: 1.8rem;
         margin-top: 1.5rem;
         border-bottom: 0;
     }
 
-    h2 {
+    & h2 {
         margin-top: 1.5rem;
         font-size: 1.3rem;
     }
 
-    h3 {
+    & h3 {
         margin-top: 1.5rem;
         font-size: 1.1rem;
     }
