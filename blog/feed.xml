@@ -9,7 +9,7 @@
         <link>https://internals.exposed/blog/posts/06-late-adopter.html</link>
         <guid>https://internals.exposed/blog/posts/06-late-adopter.html</guid>
         <pubDate>Thu, 11 Jul 2024 03:41:00 PDT</pubDate>
-        <description>A philosophical piece where I try to elaborate why I don't take any new tech seriously until I'm proven wrong. There's also some shade thrown at our collective obsession to apply as many technical solutions as possible to what are clearly organizational and social issues in software development.</description>
+        <description>A philosophical piece where I try to elaborate why I don't take any new tech seriously until I'm proven wrong. There's also some shade thrown at our collective obsession with applying as many technical solutions as possible to what seem be to organizational and social issues in software development.</description>
     </item>
     <item>
         <title>Fixing unnamed C struct bridging in CocoaScript</title>
