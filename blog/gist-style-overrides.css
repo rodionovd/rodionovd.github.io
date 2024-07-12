@@ -43,6 +43,10 @@
         margin-top: 1.5rem;
         font-size: 1.1rem;
     }
+
+    & hr {
+        background: var(--nested-callout-background-color);
+    }
 }
 
 .gist .gist-file article {
