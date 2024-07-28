@@ -5,6 +5,13 @@
     <description>Dmitry Rodionov’s Blog</description>
     <language>en</language>
     <item>
+        <title>"Convert to Modern Objective-C Syntax…"</title>
+        <link>https://internals.exposed/blog/posts/07-how-to-objc.html</link>
+        <guid>https://internals.exposed/blog/posts/07-how-to-objc.html</guid>
+        <pubDate>Sun, 28 Jul 2024 12:56:00 PDT</pubDate>
+        <description>Here I'm sharing a few of my favorite Objective-C tips and tricks in 2024, because why not?</description>
+    </item>
+    <item>
         <title>I'm a late adopter</title>
         <link>https://internals.exposed/blog/posts/06-late-adopter.html</link>
         <guid>https://internals.exposed/blog/posts/06-late-adopter.html</guid>
