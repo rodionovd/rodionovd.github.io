@@ -70,6 +70,10 @@
     & code {
         background-color: var(--nested-callout-background-color);
     }
+
+    & h3 {
+        margin-top: 0;
+    }
 }
 
 .gist .markdown-body .footnotes {
