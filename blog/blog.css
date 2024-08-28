@@ -78,10 +78,8 @@
         text-decoration: solid underline;
         -webkit-text-decoration: solid underline;
     }
-}
 
-@media (max-width: 1300px), print {
-    .toc {
+    @media (max-width: 1300px), print {
         display: none;
     }
 }
