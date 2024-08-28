@@ -87,7 +87,10 @@ function renderTableOfContents() {
         <aside class="toc">
             <div class="toc-header">
                 <span class="toc-header-label">Navigation</span>
-                <a href="#" title="Scroll to the top">↑</a>
+                <div
+                    class="toc-header-scroll-to-top"
+                    onclick="window.scrollTo({ top: 0, behavior: 'instant' });"
+                    title="Scroll to the top">↑</div>
             </div>
         </aside>
     `)[0];

@@ -52,6 +52,17 @@
             -webkit-text-decoration: var(--accent-color) solid underline;
             text-underline-offset: 2pt;
         }
+
+        & .toc-header-scroll-to-top {
+            cursor: pointer;
+            text-decoration: var(--primary-text-color) dotted underline;
+            -webkit-text-decoration: var(--primary-text-color) dotted underline;
+        }
+
+        & .toc-header-scroll-to-top:hover {
+            text-decoration: var(--primary-text-color) solid underline;
+            -webkit-text-decoration: var(--primary-text-color) solid underline;
+        }
     }
 
     & h2, h3 {
