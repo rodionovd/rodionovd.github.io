@@ -14,15 +14,18 @@ function renderPost(options) {
     }
   
     document.write(`
-        ${authorPanel()}
-        <article id="post-${options.id}">
-            <script src="https://gist.github.com/rodionovd/${options.id}.js"></script>
-            <link rel="stylesheet" href="/blog/gist-style-overrides.css">
-            <script>
-                renderTimestampBelowPostTitle("${options.timestamp}");
-                fixExternalAndAnchorLinksInPost();
-            </script>
-        </article>
+        <main>
+            ${authorPanel()}
+            <article id="post-${options.id}">
+                <script src="https://gist.github.com/rodionovd/${options.id}.js"></script>
+                <link rel="stylesheet" href="/blog/gist-style-overrides.css">
+                <script>
+                    renderTimestampBelowPostTitle("${options.timestamp}");
+                    fixExternalAndAnchorLinksInPost();
+                    renderTableOfContents();
+                </script>
+            </article>
+        </main>
     `);
 }
 
@@ -54,6 +57,48 @@ function fixExternalAndAnchorLinksInPost() {
             link.parentElement.before(anchor);
         }
     });
+}
+
+function renderTableOfContents() {
+    const headers = document.querySelectorAll(".gist h2, .gist h3");
+    const tocItems = Array.from(headers).flatMap((h) => {
+        const label = h.textContent;
+        const anchor = h.nextElementSibling;
+
+        if (!label || !anchor || anchor.className != "anchor") {
+            return [];
+        }
+
+        const href = anchor.getAttribute('href');
+        if (!href || !href.startsWith("#")) {
+            return [];
+        }
+
+        return [{
+            "label": label, "link": href, "tag": h.tagName
+        }];
+    });
+
+    if (tocItems.length < 2) {
+        return;
+    }
+
+    const toc = _html(`
+        <aside class="toc">
+            <div class="toc-header">
+                <span class="toc-header-label">Navigation</span>
+                <a href="#" title="Scroll to the top">↑</a>
+            </div>
+        </aside>
+    `)[0];
+
+    tocItems.forEach((item) => {
+        const row = _html(`<${item.tag}><a href="${item.link}">${item.label}</a></${item.tag}>`)[0];
+        toc.appendChild(row);
+    });
+
+    const container = document.querySelector("main");
+    container.insertBefore(toc, container.firstChild);
 }
 
 function _html(htmlText) {
