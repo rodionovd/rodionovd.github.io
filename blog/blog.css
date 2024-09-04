@@ -81,8 +81,7 @@
 
     & a, a:visited, a:active {
         color: var(--primary-text-color);
-        text-decoration: dotted underline;
-        -webkit-text-decoration: dotted underline;
+        text-decoration: none;
     }
 
     & a:hover {
