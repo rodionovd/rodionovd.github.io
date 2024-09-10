@@ -15,7 +15,6 @@ function renderPost(options) {
   
     document.write(`
         <main>
-            ${authorPanel()}
             <article id="post-${options.id}">
                 <script src="https://gist.github.com/rodionovd/${options.id}.js"></script>
                 <link rel="stylesheet" href="/blog/gist-style-overrides.css">
@@ -25,6 +24,7 @@ function renderPost(options) {
                     renderTableOfContents();
                 </script>
             </article>
+            ${authorPanel()}
         </main>
     `);
 }
