@@ -49,6 +49,23 @@ h4.role  {
     & ul {
         margin-top: -4pt;
     }
+
+    & img.employer-icon {
+        float: left;
+        margin-top: 5pt;
+        margin-right: 12pt;
+        
+        width: auto;
+        height: 46px;
+
+        filter: grayscale(0.3);
+
+        @media (max-width: 480px) {
+            margin-top: auto;
+            margin-right: 8pt;
+            height: 20pt;
+        }
+    }
 }
 
 .employment-info {
