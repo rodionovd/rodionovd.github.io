@@ -19,6 +19,10 @@
             <p>
                 A home of excessively niche and severely whimsical programming content.
             </p>
+            <button class="non-programming-content-toggle" id="hide-philosophy" onclick="togglePhilosophy(this);">Hide Non-Technical Posts</button>
+            <span class="non-programming-content-eyeroll hidden-content">
+                🙄 (I'm judging you, but just a little bit)
+            </span>
         </div>
     </header>
 
@@ -56,6 +60,42 @@
         posts.reverse().forEach((post, idx) => {
             post.value = idx + 1;
         })
+
+        // Show/hide all the bullshit
+        function togglePhilosophy(sender) {
+            const shouldHidePhilosophy = (sender.id == "hide-philosophy");
+            if (shouldHidePhilosophy) {
+                sender.id = "show-philosophy";
+                sender.textContent = sender.textContent.replace("Hide", "Show");
+            } else {
+                sender.id = "hide-philosophy";
+                sender.textContent = sender.textContent.replace("Show", "Hide");
+            }
+
+            const eyeroll = document.querySelector(".non-programming-content-eyeroll");
+            eyeroll.classList.toggle("hidden-content");
+
+            document.querySelectorAll(".posts").forEach((section, _) => {
+                section.querySelectorAll("li.post").forEach((post, _) => {
+                    const isNonProgrammingContent = (() => {
+                        const tags = post.querySelectorAll(".tag");
+                        return tags.length == 1 && tags.item(0).id == "philosophy"
+                    })();
+                    if (isNonProgrammingContent) {
+                        post.classList.toggle("hidden-content");
+                    }
+                });
+
+                const shouldCollapseSection = (
+                    section.querySelectorAll("li.post:not(.hidden-content)").length == 0
+                );
+                if (shouldCollapseSection) {
+                    section.classList.add("hidden-content");
+                } else {
+                    section.classList.remove("hidden-content");
+                }
+            });
+        }
     </script>
 </body>
 

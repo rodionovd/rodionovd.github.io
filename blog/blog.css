@@ -8,6 +8,18 @@
     --tag-default-color: var(--secondary-background-color);
 }
 
+.non-programming-content-toggle {
+    font-family: monospace;
+}
+
+.non-programming-content-eyeroll {
+    font-size: 70%;
+}
+
+.hidden-content {
+    display: none;
+}
+
 /* Posts */
 
 .posts {
