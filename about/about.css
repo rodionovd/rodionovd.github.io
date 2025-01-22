@@ -68,6 +68,17 @@ h4.role  {
     }
 }
 
+.casestudy-card {
+    font-size: 90%;
+    text-align: center;
+    color: var(--primary-text-color);
+    
+    padding: 6pt;
+    
+    border-radius: 6px;
+    background-color: var(--secondary-background-color);
+}
+
 .employment-info {
     font-size: 90%;
 }
