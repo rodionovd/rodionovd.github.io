@@ -4,11 +4,15 @@
     --callout-color: cornsilk;
 }
 
-.available-for-hire-callout {
+.callout-block {
+    font-size: 90%;
     text-align: center;
-    background-color: var(--callout-color);
-    border-radius: 4pt;
-    padding: 8pt;
+    color: var(--primary-text-color);
+    
+    padding: 6pt;
+    
+    border-radius: 6px;
+    background-color: var(--secondary-background-color);
 }
 
 /* Projects */
@@ -66,17 +70,6 @@ h4.role  {
             height: 20pt;
         }
     }
-}
-
-.casestudy-card {
-    font-size: 90%;
-    text-align: center;
-    color: var(--primary-text-color);
-    
-    padding: 6pt;
-    
-    border-radius: 6px;
-    background-color: var(--secondary-background-color);
 }
 
 .employment-info {
