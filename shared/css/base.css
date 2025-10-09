@@ -51,7 +51,7 @@ h3 {
     font-size: 1.1rem;
 }
 
-.subtle-bubble {
+.bubble {
     background-color: var(--secondary-background-color);
     border-radius: 3pt;
     padding: 2pt 3pt 2pt 3pt;
