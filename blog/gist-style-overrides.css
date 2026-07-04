@@ -45,7 +45,7 @@
         line-height: var(--primary-line-height);
 
         .highlight, pre, code {
-            font-family: var(--code-font-family);
+            font-family: var(--code-font-family) !important;
             font-size: 85%;
             tab-size: 4;
             background-color: var(--callout-background-color);
