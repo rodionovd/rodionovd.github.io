@@ -15,6 +15,8 @@
     background-color: var(--secondary-background-color);
 
     @media (min-width: 1300px) {
+        position: relative;
+
         float: right;
         clear: right;
         width: 260px;
@@ -22,6 +24,14 @@
         /* margin-top: 6pt; */
         margin-right: -320px;
         margin-left: 32pt;
+
+        &::after {
+            content: "📎";
+            position: absolute;
+            top: -0.75em;
+            right: -0.3em;
+            font-style: normal;
+        }
     }
 }
 
