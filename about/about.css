@@ -38,6 +38,7 @@
 /* Projects */
 
 .showcase {
+    padding-top: 2em;
     width: 100%;
 
     & td {
