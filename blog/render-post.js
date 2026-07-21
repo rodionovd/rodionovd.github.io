@@ -47,6 +47,17 @@ function fixExternalAndAnchorLinksInPost() {
         const href = link.getAttribute("href");
         if (!href) { return; }
 
+        // GitHub wraps each <img> in a link; we don't want those links
+        if (link.childNodes.length === 1) {
+            const containsSoleImage = link.childNodes[0].tagName?.toLowerCase() === "img";
+            const imagePointsToSameURL = (href === link.childNodes[0].getAttribute?.("src"));
+            if (containsSoleImage && imagePointsToSameURL) {
+                link.before(link.childNodes[0])
+                link.remove()
+                return
+            }
+        }
+
         if (href.startsWith("http")) {
             // Open all external links in a new tab/window
             link.target = "_blank";
