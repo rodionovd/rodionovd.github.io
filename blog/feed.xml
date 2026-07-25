@@ -5,6 +5,13 @@
     <description>Dmitry Rodionov’s Blog</description>
     <language>en</language>
     <item>
+        <title>Working with Xcode on CI </title>
+        <link>https://internals.exposed/blog/posts/08-xcode-on-ci.html</link>
+        <guid>https://internals.exposed/blog/posts/08-xcode-on-ci.html</guid>
+        <pubDate>Thu, 25 Jul 2026 12:56:00 PDT</pubDate>
+        <description>Let's figure out how to set up and run everyone's favorite IDE exclusively via CLI on a remote macOS CI server that builds, tests, and distributes apps for Apple platforms.</description>
+    </item>
+    <item>
         <title>"Convert to Modern Objective-C Syntax…"</title>
         <link>https://internals.exposed/blog/posts/07-how-to-objc.html</link>
         <guid>https://internals.exposed/blog/posts/07-how-to-objc.html</guid>
