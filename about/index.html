@@ -93,12 +93,26 @@
         <aside class="callout-block no-print">
             <i>A missing guide to headless Xcode: <a href="/blog/posts/08-xcode-on-ci.html" target="_blank">Working with Xcode on CI</a> ↗</i>
         </aside>
+        <aside class="callout-block no-print" style="margin-top: 1em;">
+            <i>A bug hunt story: <a href="/blog/posts/05-cocoascript-struct-bridging.html" target="_blank">Fixing unnamed C struct bridging in CocoaScript</a> ↗</i>
+        </aside>
         <p>
-            I work on keeping Sketch the most automatable design tool out there by improving SketchAPI for plugin developers and supporting full scripting capabilities for language models.
+            Leading the design automation efforts at Sketch: <a href="https://developer.sketch.com" target="_blank" >SketchAPI</a> for plugins and scripts; <a href="https://www.sketch.com/ai/" target="_blank">MCP</a> for agentic systems.
         </p>
+        <ul>
+            <li>Pioneering the <i>"just be a REPL"</i> approach to designing first-party MCP connectors.</li>
+            <li>Ensuring MCP clients have full access to SketchAPI, while running their scripts in a restricted environment to prevent API misuse, data loss, and incomplete updates.</li>
+            <li>Keeping the JavaScript API in sync with Sketch, aiming for full feature parity.</li>
+            <li>Incorporating the legacy SketchAPI codebase into the Mac app by rebuilding it in Swift with JavaScriptCore as an interop bridge.</li>
+        </ul>
         <p>
-            I'm also in charge of the build and CI infrastructure for Sketch Mac and Sketch iOS.
+            Taking care of the build and CI infrastructure for Sketch Mac and Sketch iOS.
         </p>
+        <ul>
+            <li>Maintaining a fleet of bare-metal Macs used for CI and distribution.</li>
+            <li>Consolidating fragmented legacy build scripts into self-contained Fastlane lanes.</li>
+            <li>Improving the reliability of the Jenkins Swarm and self-hosted GitHub runners.</li>
+        </ul>
     </section>
     <section class="experience-item">
         <a href="https://web.archive.org/web/20240604070655/https://sympli.io/versions" target="_blank">
@@ -110,21 +124,15 @@
             <i>A note on deconstructing cross-platform development: <a href="/blog/posts/02-cpp-makefile-spm.html" target="_blank">Running a C++ project on Swift Package Manager</a> ↗</i>
         </aside>
         <p>
-            I was the lead desktop engineer and a product co-<abbr title="Sympli was tiny headcount-wise, so there were no formal titles or anything. Still, someone had to play certain roles here, and thinking about the product is one of those that I did.">owner</abbr> of <a href="https://web.archive.org/web/20240604070655/https://sympli.io/versions" target="_blank">Sympli Versions</a> †: a version control system for designers that brought full-on branching, semantic diffing and design reviews to Sketch documents.
+            I was the lead desktop engineer and a product co-<abbr title="Sympli was tiny headcount-wise, so there were no formal titles or anything. Still, someone had to play certain roles here, and thinking about the product is one of those that I did.">owner</abbr> of <a href="https://web.archive.org/web/20240604070655/https://sympli.io/versions" target="_blank">Sympli Versions</a> † – a version control system for designers that offered full-on branching, semantic diffing and design reviews of Sketch documents.
         </p>
-        <p>
-            As a <b>product co-owner</b>, I composed high-level roadmaps and detailed action plans for specific feature trees along the way.
-        </p>
-        <p>
-            As an occasional <b>team lead</b>, I coordinated the team's workload and adjusted scope to meet deadlines. I also hired and onboarded a few teammates.
-        </p>
-        <p>
-            As a first responder for <b>customer support</b> requests, I had daily Intercom chats, Stripe dashboards, email threads, logs, and crash reports to investigate and respond to.
-        </p>
-        <p>
-            Finally, I was leading the development of a <b>native macOS</b> app that put together Sketch document branching, semantic versioning, diffing and merging, design reviews and discussions.
-            Built with Swift, AppKit, <abbr title="We built a standalone C++ cross-platform (macOS, Linux, and even Windows in theory) command line tool incorporating all business logic of diffing and merging Sketch documents (which are, in a nutshell, large interconnected JSON trees). This tool would be run both on a client side by Versions.app, and on our backend by a worker service.">C++</abbr>, NSOperations, <abbr title="We *do* actually use it as an object graph and a single source of truth for our data that comes from at least 5 different origins: the app itself, Sketch, git, Finder, and our own backend">Core Data</abbr>, and libgit2.
-        </p>
+        <ul>
+            <li>Composed high-level roadmaps and detailed action plans for specific feature trees.</li>
+            <li>Led the development of a macOS app built with Swift, AppKit, <abbr title="We built a standalone C++ cross-platform (macOS, Linux, and even Windows in theory) command line tool incorporating all business logic of diffing and merging Sketch documents (which are, in a nutshell, large interconnected JSON trees). This tool would be run both on a client side by Versions.app, and on our backend by a worker service.">C++</abbr>, NSOperations, <abbr title="We *do* actually use it as an object graph and a single source of truth for our data that comes from at least 5 different origins: the app itself, Sketch, git, Finder, and our own backend">Core Data</abbr>, and libgit2.</li>
+            <li>Coordinated the team's workload and adjusted scope to meet deadlines. Hired and onboarded a few teammates.</li>
+            <li>Responded to customer support inquiries, monitored Stripe dashboards, audited logs, and investigated crash reports.</li>
+            <li>Maintained the bare-metal Mac CI infrastructure, Fastlane, and Jenkins Pipelines.</li>
+        </ul>
     </section>
     <section class="experience-item">
         <a href="https://web.archive.org/web/20241103151010/https://sympli.io/handoff" target="_blank">
@@ -133,14 +141,12 @@
         <h4 class="role">Design Integrations Engineer</h4>
         <p class="employment-info"><a href="https://web.archive.org/web/20241103151010/https://sympli.io/handoff"  target="_blank">Sympli</a> †, 2017 – 2025</p>
         <p>
-            I was responsible for the integrations side of <a href="https://web.archive.org/web/20241103151010/https://sympli.io/handoff" target="_blank">Sympli Handoff</a> † where most of my effort went into a <a href="https://github.com/sympli/sympli-sketch-plugin" target="_blank">Sketch plugin</a> manipulating reverse-engineered Sketch data structures.
+            I was responsible for external integrations for <a href="https://web.archive.org/web/20241103151010/https://sympli.io/handoff" target="_blank">Sympli Handoff</a> † – a design handoff and collaboration platform.
         </p>
-        <p>
-            My favorite part of this project was an extensive automated test suite that validated private API contracts and specific document layout cases against <abbr title="Every single one of them starting from 46.2 and up to the latest Beta, to be exact.">multiple</abbr> versions of Sketch during CI runs. All checks were performed dynamically inside Sketch via code injection and a bit of Objective-C metaprogramming. I also implemented image snapshot testing for tricky setups that would otherwise be a nuisance to validate.
-        </p>
-        <p>
-            Additionally, I maintained plugins for Figma, Xcode, Adobe XD, and Photoshop.
-        </p>
+        <ul>
+            <li>Built an extensive automated test suite for validating internal data structures and class interfaces across multiple versions of Sketch on CI. The suite ran inside live Sketch instances via reverse code injection and Objective-C runtime manipulation.</li>
+            <li>Maintained plugins for Sketch, Figma, Xcode, Adobe XD, and Photoshop.</li>
+        </ul>
     </section>
     <section class="experience-item">
         <a href="https://www.apparentsoft.com" target="_blank">
@@ -149,10 +155,7 @@
         <h4 class="role">macOS Engineer</h4>
         <p class="employment-info"><a href="https://www.apparentsoft.com" target="_blank">Apparent Software Inc.</a>, 2017, freelance</p>
         <p>
-            I was responsible for Batch Processing in <a href="https://imageframer.net/articles/whats-new-in-imageframer-4-0/" target="_blank">ImageFramer</a>: I adapted a single-threaded image processing engine to work in a multi-threaded environment required for parallel application of image templates and built a configuration UI for the new batch export process.
-        </p>
-        <p>
-            I contributed to <a href="https://blog.apparentsoft.com/trickster/1378/trickster-brings-a-light-theme/" target="_blank">Trickster</a> by introducing theming support and adding a light UI theme, updating how file previews work, and making Watched Folders compatible with the macOS Sandbox.
+            Adapted <a href="https://imageframer.net/articles/whats-new-in-imageframer-4-0/" target="_blank">ImageFramer</a>'s single-threaded image processing engine to support parallel processing for the new Batch Processing feature. Introduced theming support in <a href="https://blog.apparentsoft.com/trickster/1378/trickster-brings-a-light-theme/" target="_blank">Trickster</a>; made its Watched Folders feature compatible with the macOS Sandbox.
         </p>
     </section>
     <section class="experience-item">
@@ -162,10 +165,7 @@
         <h4 class="role">macOS &amp; iOS Engineer</h4>
         <p class="employment-info"><a href="https://www.mentalfaculty.com" target="_blank">The Mental Faculty B.V.</a>, 2016, freelance</p>
         <p>
-            I worked on data import modules for the flashcard app <a href="https://www.studiesapp.com" target="_blank">Studies</a>, building components for importing card sets from Quizlet.com and Excel spreadsheets, accompanied by documentation and sample code.
-        </p>
-        <p>
-            I contributed to the data sync framework <a href="https://www.ensembles.io" target="_blank">Ensembles</a> by updating its Dropbox cloud file system to work with Dropbox API v2 and reporting issues to the official SDK.
+            Built Quizlet.com and Excel import modules for <a href="https://www.studiesapp.com" target="_blank">Studies</a>. Updated the Dropbox cloud file system in the data sync framework <a href="https://www.ensembles.io" target="_blank">Ensembles</a> to work with Dropbox API v2.
         </p>
     </section>
     <section class="experience-item">
@@ -178,7 +178,7 @@
             <i>A lab notebook entry: <a href="/blog/posts/03-dtrace-follow-children.html" target="_blank">On writing a DTrace script that follows the entire process subtree</a> ↗</i>
         </aside>
         <p>
-            I participated in the <a href="https://summerofcode.withgoogle.com">Google Summer of Code</a> program for students, adding support for dynamic probing of macOS actors in <a href="https://www.honeynet.org/2015/11/10/cuckoo-sandbox-meets-mac-os-x/" target="_blank">an automated malware analysis system</a>.
+            Participated in the <a href="https://summerofcode.withgoogle.com">Google Summer of Code</a> program for students, adding support for dynamic probing of macOS actors in <a href="https://www.honeynet.org/2015/11/10/cuckoo-sandbox-meets-mac-os-x/" target="_blank">an automated malware analysis system</a>.
         </p>
         <p>
             The project involved generating virtualized macOS environments, (ab)using DTrace for dynamic analysis of potentially malicious executables, and writing end-to-end Python tests covering communications between a host OS and a virtual machine.
@@ -187,18 +187,15 @@
     <section class="experience-item">
         <img class="employer-icon no-print" src="img/shops/FL.png">
         <h4 class="role">Software Engineer for Apple Platforms</h4>
-        <p class="employment-info">2011-2017, freelance</p>
+        <p class="employment-info">2011 – 2017, freelance</p>
         <p>
-            My work ranged from refactoring legacy codebases and writing Swift wrappers for C libraries to architecture review sessions and technical mentorship, developing Sketch and Apple Mail plugins, creating kernel extensions and libimobiledevice-based MDM tools, and building full-featured iOS &amp; macOS apps.
+            Work included refactoring legacy codebases and writing Swift wrappers for C libraries, conducting architecture review sessions, providing technical mentorship, developing plugins for Sketch and Apple Mail, creating kernel extensions and libimobiledevice-based MDM tools, and building full-featured iOS &amp; macOS apps.
         </p>
     </section>
     <section class="experience-item no-print">
         <img class="employer-icon no-print" src="img/shops/OS.png">
         <h4 class="role" id="opensource">Open Source Contributor</h4>
         <p class="employment-info">since 2012</p>
-        <aside class="callout-block no-print">
-            <i>A bug hunt story: <a href="/blog/posts/05-cocoascript-struct-bridging.html" target="_blank">Fixing unnamed C struct bridging in CocoaScript</a> ↗</i>
-        </aside>
         <p>
             A selection of my open source contributions:
             <ul>
@@ -212,7 +209,7 @@
     <section class="experience-item no-print">
         <img class="employer-icon no-print" src="img/shops/RE.png">
         <h4 class="role" id="re">Reverse Engineer / Security Researcher</h4>
-        <p class="employment-info"><abbr title="To give you an idea: the only way to disassemble a Mac app (other than inaccessible IDA Pro) was to use otx/otool and load a few hundred megabytes of plain text it generates into Sublime Text (the only sane text editor able to index it on a 2GB RAM machine). Fun times!">A long time ago</abbr> in a galaxy far, far away…</p>
+        <p class="employment-info">A long time ago in a galaxy far, far away…</p>
         <p>
             A selection of my security research projects:
             <ul>
